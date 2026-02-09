@@ -704,10 +704,18 @@ nav a:hover {
    HERO SVG TRADING ILLUSTRATION
    =========================== */
 .hero-illustration {
-	max-width: 800px;
-	margin: 3rem auto 0;
+	max-width: 900px;
+	margin: 2rem auto 0;
 	position: relative;
 	animation: heroFadeIn 1s ease 0.3s both;
+}
+
+.hero-float-panel {
+	animation: panelFloat 7s ease-in-out infinite;
+}
+@keyframes panelFloat {
+	0%, 100% { transform: translateY(0); }
+	50% { transform: translateY(-10px); }
 }
 
 @keyframes heroFadeIn {

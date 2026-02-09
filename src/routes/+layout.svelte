@@ -20,9 +20,10 @@
 		<nav class:open={menuOpen}>
 			<a href="/exchanges" onclick={() => menuOpen = false}>Exchanges</a>
 			<a href="/compare" onclick={() => menuOpen = false}>Compare</a>
-			<a href="/guides" onclick={() => menuOpen = false}>Guides</a>
+			<a href="/learn" onclick={() => menuOpen = false}>Guides</a>
 			<a href="/glossary" onclick={() => menuOpen = false}>Glossary</a>
-			<a href="/about" onclick={() => menuOpen = false}>About</a>
+			<a href="/tools" onclick={() => menuOpen = false}>Tools</a>
+			<a href="/countries" onclick={() => menuOpen = false}>Countries</a>
 		</nav>
 	</div>
 </header>
@@ -54,11 +55,11 @@
 		<div class="footer-col">
 			<h4>Guides</h4>
 			<ul>
-				<li><a href="/guides/what-is-margin-trading">What Is Margin Trading?</a></li>
-				<li><a href="/guides/margin-trading-for-beginners">Beginner's Guide</a></li>
-				<li><a href="/guides/best-margin-trading-platforms-2026">Best Platforms 2026</a></li>
-				<li><a href="/guides/margin-trading-risks">Trading Risks</a></li>
-				<li><a href="/guides/margin-trading-strategies">Trading Strategies</a></li>
+				<li><a href="/learn/what-is-margin-trading">What Is Margin Trading?</a></li>
+				<li><a href="/learn/margin-trading-for-beginners">Beginner's Guide</a></li>
+				<li><a href="/learn/best-margin-trading-platforms-2026">Best Platforms 2026</a></li>
+				<li><a href="/learn/margin-trading-risks">Trading Risks</a></li>
+				<li><a href="/learn/margin-trading-strategies">Trading Strategies</a></li>
 			</ul>
 		</div>
 		<div class="footer-col">
@@ -66,8 +67,9 @@
 			<ul>
 				<li><a href="/compare">Compare Exchanges</a></li>
 				<li><a href="/glossary">Glossary</a></li>
+				<li><a href="/tools">Calculators</a></li>
+				<li><a href="/countries">By Country</a></li>
 				<li><a href="/about">About Us</a></li>
-				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
 	</div>
