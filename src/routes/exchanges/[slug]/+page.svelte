@@ -305,3 +305,71 @@
 		<strong>⚠️ Risk Disclaimer:</strong> Margin trading on {ex.name} involves substantial risk. You can lose more than your initial investment. This review is for informational purposes only and does not constitute financial advice. Always do your own research before trading.
 	</div>
 </div>
+
+<style>
+	@media (max-width: 900px) {
+		.review-layout {
+			grid-template-columns: 1fr !important;
+		}
+		
+		.review-sidebar {
+			position: static !important;
+		}
+	}
+
+	@media (max-width: 768px) {
+		/* Exchange header mobile fixes */
+		.exchange-header-svg svg text {
+			font-size: 24px !important;
+		}
+
+		.exchange-header-svg svg g:nth-of-type(2),
+		.exchange-header-svg svg g:nth-of-type(3) {
+			transform: scale(0.8);
+		}
+
+		/* Make tables scrollable */
+		.comparison-table {
+			overflow-x: auto;
+		}
+
+		/* Quick stats grid */
+		div[style*="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))"] {
+			grid-template-columns: repeat(2, 1fr) !important;
+			gap: 0.75rem !important;
+		}
+
+		/* Pros/cons on mobile */
+		.pros-cons {
+			grid-template-columns: 1fr !important;
+		}
+
+		/* Sidebar CTA button */
+		.sidebar-cta .btn {
+			padding: 0.75rem 1rem;
+			font-size: 0.9rem;
+		}
+
+		/* Better spacing on mobile */
+		.container {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		/* Stack quick stats vertically on very small screens */
+		div[style*="grid-template-columns:repeat(2, 1fr)"] {
+			grid-template-columns: 1fr !important;
+		}
+
+		/* Smaller text on mobile */
+		.exchange-header-svg svg text:first-of-type {
+			font-size: 20px !important;
+		}
+		
+		.exchange-header-svg svg text:nth-of-type(2) {
+			font-size: 12px !important;
+		}
+	}
+</style>

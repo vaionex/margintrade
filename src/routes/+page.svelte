@@ -118,13 +118,13 @@
 				<text x="290" y="36" fill="#22c55e" font-size="10" font-family="Inter, system-ui, sans-serif">▲ +4.2%</text>
 				<!-- Timeframe tabs -->
 				<rect x="370" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="379" y="36" fill="#64748b" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1H</text>
+				<text x="379" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1H</text>
 				<rect x="405" y="22" width="30" height="20" rx="4" fill="url(#leverageGrad)"/>
 				<text x="413" y="36" fill="white" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700">4H</text>
 				<rect x="440" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="449" y="36" fill="#64748b" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1D</text>
+				<text x="449" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1D</text>
 				<rect x="475" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="483" y="36" fill="#64748b" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1W</text>
+				<text x="483" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1W</text>
 
 				<!-- Grid -->
 				{#each [100, 155, 210, 265, 320] as y}
@@ -135,18 +135,18 @@
 				{/each}
 
 				<!-- Y-axis labels -->
-				<text x="22" y="104" fill="#475569" font-size="9" font-family="Inter, system-ui, sans-serif">$69k</text>
-				<text x="22" y="159" fill="#475569" font-size="9" font-family="Inter, system-ui, sans-serif">$68k</text>
-				<text x="22" y="214" fill="#475569" font-size="9" font-family="Inter, system-ui, sans-serif">$67k</text>
-				<text x="22" y="269" fill="#475569" font-size="9" font-family="Inter, system-ui, sans-serif">$66k</text>
-				<text x="22" y="324" fill="#475569" font-size="9" font-family="Inter, system-ui, sans-serif">$65k</text>
+				<text x="22" y="104" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$69k</text>
+				<text x="22" y="159" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$68k</text>
+				<text x="22" y="214" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$67k</text>
+				<text x="22" y="269" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$66k</text>
+				<text x="22" y="324" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$65k</text>
 
 				<!-- X-axis labels -->
-				<text x="105" y="356" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">09:00</text>
-				<text x="185" y="356" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">11:00</text>
-				<text x="265" y="356" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">13:00</text>
-				<text x="345" y="356" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">15:00</text>
-				<text x="425" y="356" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">17:00</text>
+				<text x="105" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">09:00</text>
+				<text x="185" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">11:00</text>
+				<text x="265" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">13:00</text>
+				<text x="345" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">15:00</text>
+				<text x="425" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">17:00</text>
 
 				<!-- Candlesticks (16 candles, more detail) -->
 				{#each [
@@ -186,6 +186,13 @@
 				<rect x="490" y="102" width="48" height="16" rx="3" fill="#3b82f6"/>
 				<text x="514" y="113" fill="white" font-size="8" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">$67.8k</text>
 
+				<!-- Hover crosshair -->
+				<g class="chart-crosshair">
+					<line x1="300" y1="70" x2="300" y2="340" stroke="rgba(59, 130, 246, 0.6)" stroke-width="1" stroke-dasharray="4 4"/>
+					<line x1="55" y1="200" x2="530" y2="200" stroke="rgba(59, 130, 246, 0.6)" stroke-width="1" stroke-dasharray="4 4"/>
+					<circle cx="300" cy="200" r="4" fill="rgba(59, 130, 246, 0.8)" stroke="white" stroke-width="1"/>
+				</g>
+
 				<!-- Volume bars at bottom -->
 				{#each [18, 12, 22, 28, 15, 25, 32, 14, 30, 35, 20, 38, 42, 16, 40, 22] as vol, i}
 					<rect x={78 + i * 25} y={340 - vol * 0.8} width="14" height={vol * 0.8} rx="1" fill={[true,false,true,true,false,true,true,false,true,true,false,true,true,false,true,false][i] ? 'rgba(34,197,94,0.25)' : 'rgba(239,68,68,0.25)'}/>
@@ -198,8 +205,8 @@
 				<text x="65" y="383" fill="#22c55e" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Buy / Long</text>
 				<rect x="110" y="370" width="70" height="18" rx="4" fill="#ef4444" opacity="0.15"/>
 				<text x="145" y="383" fill="#ef4444" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Sell / Short</text>
-				<text x="210" y="383" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif">Qty: 0.5 BTC</text>
-				<text x="310" y="383" fill="#475569" font-size="8" font-family="Inter, system-ui, sans-serif">Margin: $3,392</text>
+				<text x="210" y="383" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Qty: 0.5 BTC</text>
+				<text x="310" y="383" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Margin: $3,392</text>
 			</svg>
 
 			<!-- Floating Leverage Panel (positioned right, top) -->
@@ -209,13 +216,13 @@
 					<text x="18" y="28" fill="#94a3b8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" letter-spacing="0.08em">LEVERAGE</text>
 					<!-- Leverage buttons -->
 					<rect x="14" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="34" y="55" fill="#64748b" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">3x</text>
+					<text x="34" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">3x</text>
 					<rect x="60" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="80" y="55" fill="#64748b" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">5x</text>
+					<text x="80" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">5x</text>
 					<rect x="106" y="38" width="40" height="26" rx="6" fill="url(#leverageGrad2)"/>
 					<text x="126" y="55" fill="white" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">10x</text>
 					<rect x="152" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="172" y="55" fill="#64748b" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">25x</text>
+					<text x="172" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">25x</text>
 					<!-- Leverage slider -->
 					<rect x="14" y="74" width="172" height="4" rx="2" fill="#1e293b"/>
 					<rect x="14" y="74" width="100" height="4" rx="2" fill="url(#leverageGrad2)"/>
@@ -228,7 +235,7 @@
 					<rect x="14" y="108" width="85" height="6" rx="3" fill="#f59e0b"/>
 					<text x="170" y="102" fill="#f59e0b" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">Medium</text>
 					<!-- Entry/Liq prices -->
-					<text x="18" y="128" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Entry: $67,842</text>
+					<text x="18" y="128" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Entry: $67,842</text>
 					<text x="186" y="128" fill="#ef4444" font-size="8" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">Liq: $61,058</text>
 					<defs>
 						<linearGradient id="leverageGrad2" x1="0" y1="0" x2="1" y2="1">
@@ -252,17 +259,17 @@
 						<animate attributeName="width" values="100;128;110;128" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
 					</rect>
 					<!-- Details grid -->
-					<text x="18" y="92" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Side</text>
+					<text x="18" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Side</text>
 					<text x="18" y="104" fill="#22c55e" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">Long 10x</text>
-					<text x="90" y="92" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Size</text>
+					<text x="90" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Size</text>
 					<text x="90" y="104" fill="#f0f4f8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">0.5 BTC</text>
-					<text x="155" y="92" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Margin</text>
+					<text x="155" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Margin</text>
 					<text x="155" y="104" fill="#f0f4f8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">$3,392</text>
 					<!-- Funding rate -->
 					<line x1="18" y1="114" x2="192" y2="114" stroke="#1e293b" stroke-width="1"/>
-					<text x="18" y="130" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Funding Rate</text>
+					<text x="18" y="130" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Funding Rate</text>
 					<text x="192" y="130" fill="#22c55e" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">0.012%</text>
-					<text x="18" y="146" fill="#64748b" font-size="8" font-family="Inter, system-ui, sans-serif">Next Funding</text>
+					<text x="18" y="146" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Next Funding</text>
 					<text x="192" y="146" fill="#94a3b8" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">2h 14m</text>
 				</svg>
 			</div>
@@ -567,3 +574,112 @@
 		<strong>⚠️ Risk Disclaimer:</strong> Margin trading involves substantial risk of loss and is not suitable for all investors. The high degree of leverage can work against you as well as for you. Before deciding to trade on margin, you should carefully consider your investment objectives, level of experience, and risk appetite. The content on MarginTrade.com is for educational purposes only and should not be considered financial advice. We may earn commissions from referral links at no additional cost to you.
 	</div>
 </div>
+
+<style>
+	/* Hero hover effects */
+	.hero-illustration {
+		position: relative;
+	}
+
+	.hero-illustration svg {
+		transition: all var(--transition-slow);
+		cursor: pointer;
+	}
+
+	.hero-illustration:hover svg {
+		transform: scale(1.02);
+		filter: drop-shadow(0 8px 40px rgba(59, 130, 246, 0.15));
+	}
+
+	/* Floating panel hover effects */
+	.hero-float-panel {
+		transition: all var(--transition-base);
+		cursor: pointer;
+	}
+
+	.hero-float-panel:hover {
+		transform: translateY(-4px) scale(1.05);
+		filter: drop-shadow(0 8px 25px rgba(99, 102, 241, 0.2)) 
+				drop-shadow(0 0 20px rgba(139, 92, 246, 0.1));
+	}
+
+	/* Crosshair effect on main chart hover */
+	.hero-illustration svg:hover .chart-crosshair {
+		opacity: 1;
+	}
+
+	.chart-crosshair {
+		opacity: 0;
+		transition: opacity var(--transition-fast);
+		pointer-events: none;
+	}
+
+	/* Exchange badge hover */
+	.hero-illustration .hero-float-panel:hover svg rect {
+		fill: rgba(59, 130, 246, 0.1);
+		stroke: rgba(59, 130, 246, 0.3);
+	}
+
+	/* Glowing border effect on chart hover */
+	.hero-illustration:hover svg > g:first-child rect {
+		stroke: rgba(59, 130, 246, 0.4);
+		stroke-width: 2px;
+		filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.2));
+	}
+
+	/* Mobile responsiveness */
+	@media (max-width: 768px) {
+		.hero-illustration {
+			transform: translateX(0) !important;
+			max-width: 100%;
+		}
+
+		/* Hide floating panels on mobile for cleaner look */
+		.hero-float-panel {
+			display: none;
+		}
+
+		/* Make main chart more prominent on mobile */
+		.hero-illustration svg {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		/* Ensure hero actions stack properly */
+		.hero-actions {
+			flex-direction: column;
+			gap: 0.75rem;
+		}
+
+		.hero-actions .btn {
+			width: 100%;
+			justify-content: center;
+		}
+
+		/* Better hero text sizing */
+		.hero h1 {
+			font-size: clamp(2rem, 8vw, 2.5rem) !important;
+			line-height: 1.2;
+		}
+
+		.hero p {
+			font-size: 1rem;
+			margin-bottom: 2rem;
+		}
+	}
+
+	@media (max-width: 480px) {
+		.hero {
+			padding: 3rem 0 2rem;
+		}
+		
+		.hero-label {
+			font-size: 0.7rem;
+		}
+
+		.hero-trust {
+			font-size: 0.8rem;
+			gap: 0.75rem;
+		}
+	}
+</style>

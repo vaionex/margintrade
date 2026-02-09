@@ -12,7 +12,20 @@
 <header class="site-header">
 	<div class="header-inner">
 		<a href="/" class="logo">
-			<span class="logo-icon">📊</span> MarginTrade
+			<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+				<defs>
+					<linearGradient id="logoGradient" x1="0" y1="0" x2="1" y2="1">
+						<stop offset="0%" stop-color="#3b82f6"/>
+						<stop offset="100%" stop-color="#8b5cf6"/>
+					</linearGradient>
+				</defs>
+				<rect width="28" height="28" rx="7" fill="url(#logoGradient)"/>
+				<rect x="6" y="16" width="3" height="8" rx="1.5" fill="white" opacity="0.9"/>
+				<rect x="9.5" y="12" width="3" height="12" rx="1.5" fill="white"/>
+				<rect x="13" y="8" width="3" height="16" rx="1.5" fill="white" opacity="0.9"/>
+				<path d="M6 14L12 8L18 12L22 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+			</svg>
+			<span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span>
 		</a>
 		<button class="mobile-menu-toggle" onclick={() => menuOpen = !menuOpen} aria-label="Toggle menu">
 			{menuOpen ? '✕' : '☰'}
@@ -38,7 +51,22 @@
 <footer class="site-footer">
 	<div class="footer-grid">
 		<div class="footer-about">
-			<a href="/" class="logo"><span class="logo-icon">📊</span> MarginTrade</a>
+			<a href="/" class="logo">
+				<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-icon">
+					<defs>
+						<linearGradient id="logoGradientFooter" x1="0" y1="0" x2="1" y2="1">
+							<stop offset="0%" stop-color="#3b82f6"/>
+							<stop offset="100%" stop-color="#8b5cf6"/>
+						</linearGradient>
+					</defs>
+					<rect width="28" height="28" rx="7" fill="url(#logoGradientFooter)"/>
+					<rect x="6" y="16" width="3" height="8" rx="1.5" fill="white" opacity="0.9"/>
+					<rect x="9.5" y="12" width="3" height="12" rx="1.5" fill="white"/>
+					<rect x="13" y="8" width="3" height="16" rx="1.5" fill="white" opacity="0.9"/>
+					<path d="M6 14L12 8L18 12L22 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
+				</svg>
+				<span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span>
+			</a>
 			<p>Your trusted resource for margin trading exchange reviews, comparisons, and educational guides. We help traders find the best platforms for leveraged trading.</p>
 		</div>
 		<div class="footer-col">

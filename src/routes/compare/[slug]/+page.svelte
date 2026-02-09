@@ -434,13 +434,64 @@
 		flex-wrap: wrap;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 768px) {
 		.vs-matchup {
 			flex-direction: column;
 			gap: 1rem;
 		}
 		.score-summary {
 			grid-template-columns: 1fr;
+		}
+		
+		.cta-row {
+			flex-direction: column;
+		}
+		
+		.cta-row .btn {
+			width: 100%;
+			justify-content: center;
+		}
+		
+		/* Better spacing for mobile */
+		.container-narrow {
+			padding-left: 1rem;
+			padding-right: 1rem;
+		}
+		
+		.vs-hero-inner {
+			padding: 0 1rem;
+		}
+		
+		/* Score bar improvements */
+		.sb-label {
+			width: 60px;
+			font-size: 0.7rem;
+		}
+	}
+	
+	@media (max-width: 480px) {
+		.vs-fighter h2 {
+			font-size: 1.2rem;
+		}
+		
+		.vs-fighter-icon {
+			width: 48px;
+			height: 48px;
+			font-size: 1.2rem;
+		}
+		
+		.vs-badge {
+			width: 60px;
+			height: 60px;
+		}
+		
+		.vs-ring {
+			width: 60px;
+			height: 60px;
+		}
+		
+		.vs-text {
+			font-size: 1.2rem;
 		}
 	}
 </style>

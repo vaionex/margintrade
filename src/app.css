@@ -13,7 +13,7 @@
 	--bg-card-hover: #162040;
 	--text-primary: #f0f4f8;
 	--text-secondary: #94a3b8;
-	--text-muted: #64748b;
+	--text-muted: #8b9bb5;
 	--accent: #3b82f6;
 	--accent-hover: #2563eb;
 	--accent-light: #60a5fa;
@@ -99,6 +99,29 @@ li { margin-bottom: 0.5rem; }
 }
 .table-wrap table {
 	margin: 0;
+}
+
+/* Ensure all tables are mobile-friendly */
+@media (max-width: 768px) {
+	table {
+		display: block;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+	
+	.table-wrap {
+		margin: 1rem 0;
+	}
+	
+	/* Better mobile table styling */
+	th, td {
+		padding: 0.75rem 0.75rem;
+		font-size: 0.85rem;
+	}
+	
+	th {
+		font-size: 0.75rem;
+	}
 }
 
 table {
@@ -776,7 +799,7 @@ nav a:hover {
 .steps-grid::before {
 	content: '';
 	position: absolute;
-	top: 3rem;
+	top: 1.75rem;
 	left: calc(16.67% + 1rem);
 	right: calc(16.67% + 1rem);
 	height: 2px;
