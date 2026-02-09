@@ -955,6 +955,261 @@ export const exchanges = [
 			{ q: 'Is CMC Markets safe?', a: 'CMC Markets is publicly traded on the London Stock Exchange, regulated by FCA, ASIC, BaFin, and MAS, and has been operating since 1989. Client funds are held in segregated bank accounts.' },
 			{ q: 'Does CMC Markets offer spread betting?', a: 'Yes, CMC Markets offers tax-free spread betting for UK and Ireland residents alongside its CFD products.' }
 		]
+	},
+	{
+		slug: 'dydx',
+		name: 'dYdX',
+		type: 'crypto',
+		founded: 2017,
+		headquarters: 'Decentralized (Cosmos)',
+		rating: 4.2,
+		maxLeverage: 20,
+		makerFee: 0.02,
+		takerFee: 0.05,
+		marginTypes: ['Cross Margin', 'Isolated Margin'],
+		tradingPairs: 180,
+		minDeposit: 0,
+		depositMethods: ['Crypto (USDC)', 'Bridge from Ethereum'],
+		regulated: false,
+		regulators: ['Decentralized — no central authority'],
+		marginAssets: ['USDC'],
+		interestRate: 'Funding rate based',
+		liquidationFee: '1.0%',
+		referralUrl: 'https://dydx.exchange/r/MARGINTRADE',
+		referralBonus: 'Fee discounts for referrals',
+		description: 'dYdX is the leading decentralized perpetual exchange, operating on its own Cosmos-based blockchain (dYdX Chain). Unlike centralized exchanges, dYdX offers non-custodial trading — you maintain control of your funds at all times. With an open-source order book and validator network, dYdX represents the future of decentralized margin trading.',
+		pros: [
+			'Fully decentralized and non-custodial',
+			'No KYC required',
+			'Open-source and transparent',
+			'Own blockchain (dYdX Chain) for speed',
+			'Community governance via DYDX token',
+			'Resistant to exchange hacks/collapses',
+			'Available globally (no geo-restrictions by protocol)'
+		],
+		cons: [
+			'Lower liquidity than top centralized exchanges',
+			'Limited trading pairs (~180)',
+			'Maximum 20x leverage (lower than CEXs)',
+			'Requires crypto wallet setup (not beginner-friendly)',
+			'No fiat deposit options',
+			'Regulatory gray area in some jurisdictions',
+			'Smart contract risk'
+		],
+		features: { spotMargin: false, futuresMargin: true, optionsTrading: false, copyTrading: false, botTrading: true, stakingRewards: true, mobilApp: true, api: true },
+		marginTiers: [
+			{ tier: 1, maxPosition: '$100,000', maxLeverage: 20, maintenanceMargin: '3%' },
+			{ tier: 2, maxPosition: '$500,000', maxLeverage: 15, maintenanceMargin: '4%' },
+			{ tier: 3, maxPosition: '$2,000,000', maxLeverage: 10, maintenanceMargin: '5%' }
+		],
+		signupSteps: [
+			'Install a compatible crypto wallet (e.g., MetaMask, Keplr)',
+			'Visit dYdX through our referral link',
+			'Connect your wallet to the dYdX interface',
+			'Deposit USDC to your dYdX account',
+			'Navigate to the trading interface',
+			'Select your trading pair and leverage (up to 20x)',
+			'Place your order — your funds remain in your control',
+			'Manage positions and withdraw anytime'
+		],
+		faq: [
+			{ q: 'Is dYdX truly decentralized?', a: 'Yes. dYdX v4 runs on its own Cosmos-based blockchain with independent validators. The order book, matching engine, and settlement are all on-chain. No single entity controls the protocol.' },
+			{ q: 'Do I need KYC to use dYdX?', a: 'No. dYdX is a decentralized protocol that does not require identity verification. You trade directly from your crypto wallet.' },
+			{ q: 'Is dYdX legal in the USA?', a: 'The dYdX protocol is accessible globally, but the dYdX Trading Inc. front-end has geo-restricted US users. US traders may access the protocol through alternative front-ends, though regulatory compliance remains a personal responsibility.' },
+			{ q: 'How does dYdX compare to centralized exchanges?', a: 'dYdX offers lower leverage (20x max) and fewer pairs than CEXs, but provides non-custodial trading, no KYC, and elimination of exchange counterparty risk.' }
+		]
+	},
+	{
+		slug: 'htx',
+		name: 'HTX (Huobi)',
+		type: 'crypto',
+		founded: 2013,
+		headquarters: 'Seychelles',
+		rating: 4.1,
+		maxLeverage: 200,
+		makerFee: 0.02,
+		takerFee: 0.05,
+		marginTypes: ['Cross Margin', 'Isolated Margin'],
+		tradingPairs: 900,
+		minDeposit: 0,
+		depositMethods: ['Crypto', 'Credit Card', 'P2P', 'Bank Transfer'],
+		regulated: true,
+		regulators: ['Various regional licenses'],
+		marginAssets: ['BTC', 'ETH', 'USDT', 'HT', '40+ assets'],
+		interestRate: '0.01% - 0.05% daily',
+		liquidationFee: '0.5%',
+		referralUrl: 'https://www.htx.com/invite/en-us/1f?invite_code=MARGINTRADE',
+		referralBonus: '$170 welcome bonus',
+		description: 'HTX (formerly Huobi Global) is one of the longest-running cryptocurrency exchanges, founded in 2013. After rebranding to HTX in 2023, the exchange continues to offer comprehensive margin trading services including cross-margin with up to 200x leverage on futures. With a decade of operational history, HTX serves millions of users across 100+ countries.',
+		pros: [
+			'Established since 2013 (10+ years)',
+			'Up to 200x leverage on futures',
+			'Wide range of margin trading pairs',
+			'Cross-margin lending market',
+			'HT token for fee discounts',
+			'Multiple margin account types',
+			'Available in most regions'
+		],
+		cons: [
+			'Rebranding confusion (Huobi → HTX)',
+			'Reduced market share in recent years',
+			'Not available in USA',
+			'Customer support inconsistency',
+			'Concerns about reserves transparency',
+			'Lower liquidity than top 3 exchanges'
+		],
+		features: { spotMargin: true, futuresMargin: true, optionsTrading: false, copyTrading: true, botTrading: true, stakingRewards: true, mobilApp: true, api: true },
+		marginTiers: [
+			{ tier: 1, maxPosition: '$50,000', maxLeverage: 200, maintenanceMargin: '0.5%' },
+			{ tier: 2, maxPosition: '$200,000', maxLeverage: 100, maintenanceMargin: '1.0%' },
+			{ tier: 3, maxPosition: '$1,000,000', maxLeverage: 50, maintenanceMargin: '2.0%' }
+		],
+		signupSteps: [
+			'Visit HTX through our referral link for welcome bonuses',
+			'Register with your email or phone number',
+			'Complete email/SMS verification',
+			'Pass KYC identity verification',
+			'Enable 2FA for account security',
+			'Deposit funds via crypto or fiat methods',
+			'Navigate to Futures or Margin trading section',
+			'Select leverage and begin trading'
+		],
+		faq: [
+			{ q: 'Is HTX the same as Huobi?', a: 'Yes. Huobi Global rebranded to HTX in September 2023. The platform, team, and services remain largely the same under the new name.' },
+			{ q: 'Is HTX safe to use?', a: 'HTX has operated since 2013 with a generally positive security record. However, there have been concerns about transparency following leadership changes. Always use 2FA and only deposit what you can afford to trade.' },
+			{ q: 'What leverage does HTX offer?', a: 'HTX offers up to 200x leverage on select USDT-M futures contracts and up to 5x on spot margin trading.' }
+		]
+	},
+	{
+		slug: 'xtb',
+		name: 'XTB',
+		type: 'traditional',
+		founded: 2002,
+		headquarters: 'Warsaw, Poland',
+		rating: 4.4,
+		maxLeverage: 30,
+		makerFee: 0.0,
+		takerFee: 0.0,
+		marginTypes: ['CFD Margin'],
+		tradingPairs: 0,
+		tradingProducts: 'Stocks, ETFs, Forex, Indices, Commodities, Crypto (5,800+ instruments as CFDs)',
+		minDeposit: 0,
+		depositMethods: ['Bank Transfer', 'Credit Card', 'PayPal', 'Skrill'],
+		regulated: true,
+		regulators: ['FCA (UK)', 'KNF (Poland)', 'CySEC (Cyprus)', 'FSCA (South Africa)', 'DFSA (Dubai)'],
+		marginAssets: ['USD', 'EUR', 'GBP', 'PLN'],
+		interestRate: 'Overnight swap rates vary by instrument',
+		liquidationFee: 'Margin close out at 50% maintenance',
+		referralUrl: 'https://www.xtb.com/referral/MARGINTRADE',
+		referralBonus: 'Zero commission stocks & ETFs',
+		description: 'XTB is a publicly traded (WSE: XTB) European online brokerage founded in 2002. Regulated across multiple EU jurisdictions, XTB offers zero-commission stock and ETF trading alongside CFD margin trading on 5,800+ instruments. Its award-winning xStation 5 platform is praised for its balance of power and usability.',
+		pros: [
+			'Zero commission on real stocks & ETFs',
+			'Publicly traded (Warsaw Stock Exchange)',
+			'Award-winning xStation 5 platform',
+			'Regulated by FCA, KNF, CySEC',
+			'No minimum deposit',
+			'Excellent educational content (Trading Academy)',
+			'5,800+ instruments available',
+			'Negative balance protection'
+		],
+		cons: [
+			'Not available in USA',
+			'Limited product range vs Interactive Brokers',
+			'CFD-only for margin trading',
+			'Inactivity fee after 12 months',
+			'No MetaTrader 5 support',
+			'Limited cryptocurrency selection'
+		],
+		features: { spotMargin: false, futuresMargin: false, optionsTrading: false, copyTrading: false, botTrading: false, stakingRewards: false, mobilApp: true, api: true },
+		marginTiers: [
+			{ tier: 'Forex Majors', maxPosition: 'Varies', maxLeverage: 30, maintenanceMargin: '3.33%' },
+			{ tier: 'Forex Minors', maxPosition: 'Varies', maxLeverage: 20, maintenanceMargin: '5%' },
+			{ tier: 'Indices', maxPosition: 'Varies', maxLeverage: 20, maintenanceMargin: '5%' },
+			{ tier: 'Commodities', maxPosition: 'Varies', maxLeverage: 10, maintenanceMargin: '10%' },
+			{ tier: 'Stocks CFD', maxPosition: 'Varies', maxLeverage: 5, maintenanceMargin: '20%' },
+			{ tier: 'Crypto CFD', maxPosition: 'Varies', maxLeverage: 2, maintenanceMargin: '50%' }
+		],
+		signupSteps: [
+			'Visit XTB through our link',
+			'Click "Open Account" and fill in your details',
+			'Complete the financial suitability questionnaire',
+			'Upload ID for verification',
+			'Deposit funds (no minimum required)',
+			'Download xStation 5 or use the web platform',
+			'Search for your instrument and set leverage',
+			'Place your trade with stop-loss and take-profit'
+		],
+		faq: [
+			{ q: 'Is XTB a good broker?', a: 'XTB is a well-regulated, publicly traded broker with over 20 years of history. It is especially strong for European traders with its zero-commission stock trading and award-winning platform.' },
+			{ q: 'Does XTB charge commissions?', a: 'XTB offers zero-commission trading on real stocks and ETFs (up to €100,000 monthly turnover). CFD trading is spread-based with no direct commissions.' },
+			{ q: 'Is XTB available in the USA?', a: 'No, XTB does not currently serve US clients. It is primarily available in Europe, the Middle East, and select other regions.' },
+			{ q: 'What platform does XTB use?', a: 'XTB uses its proprietary xStation 5 platform, available as web, desktop, and mobile apps. It features advanced charting, market sentiment data, and a built-in trading calculator.' }
+		]
+	},
+	{
+		slug: 'robinhood',
+		name: 'Robinhood',
+		type: 'traditional',
+		founded: 2013,
+		headquarters: 'Menlo Park, California, USA',
+		rating: 3.9,
+		maxLeverage: 2,
+		makerFee: 0.0,
+		takerFee: 0.0,
+		marginTypes: ['Reg T Margin'],
+		tradingPairs: 0,
+		tradingProducts: 'Stocks, ETFs, Options, Crypto (limited margin on stocks only)',
+		minDeposit: 0,
+		depositMethods: ['Bank Transfer', 'ACH', 'Wire Transfer'],
+		regulated: true,
+		regulators: ['SEC', 'FINRA', 'SIPC'],
+		marginAssets: ['USD'],
+		interestRate: '5.75% (Gold) — 12% (standard)',
+		liquidationFee: 'Standard margin call procedures',
+		referralUrl: 'https://robinhood.com/refer/MARGINTRADE',
+		referralBonus: 'Free stock on signup',
+		description: 'Robinhood democratized stock trading with its commission-free model and mobile-first design. While primarily known for beginner-friendly stock and crypto trading, Robinhood offers margin trading through its Robinhood Gold subscription ($5/month) with lower interest rates (5.75%) compared to traditional brokers. It is a simple entry point for US investors who want basic margin capabilities.',
+		pros: [
+			'Zero commission trading',
+			'Very beginner-friendly mobile app',
+			'Low margin rates with Gold (5.75%)',
+			'Fractional share trading',
+			'SIPC insured',
+			'Available to most US residents',
+			'Simple, clean interface',
+			'Instant deposits'
+		],
+		cons: [
+			'Maximum 2x leverage (Reg T only)',
+			'No futures or advanced derivatives',
+			'Limited order types',
+			'No international markets',
+			'Payment for order flow (PFOF) concerns',
+			'Limited research and analysis tools',
+			'Controversial history (GME restrictions)',
+			'US only'
+		],
+		features: { spotMargin: false, futuresMargin: false, optionsTrading: true, copyTrading: false, botTrading: false, stakingRewards: false, mobilApp: true, api: false },
+		marginTiers: [
+			{ tier: 'Reg T Standard', maxPosition: 'Varies', maxLeverage: 2, maintenanceMargin: '25-50%' }
+		],
+		signupSteps: [
+			'Download the Robinhood app or visit robinhood.com',
+			'Sign up with your email and personal details',
+			'Verify your identity (SSN required — US only)',
+			'Link your bank account for deposits',
+			'Upgrade to Robinhood Gold ($5/month) for margin trading',
+			'Deposit funds (instant deposits available)',
+			'Enable margin trading in account settings',
+			'Start trading stocks on margin'
+		],
+		faq: [
+			{ q: 'How does Robinhood margin work?', a: 'Robinhood offers margin through its Gold subscription ($5/month). You can borrow up to 2x your account value (Reg T margin). The first $1,000 of margin is included with Gold, with additional margin at 5.75% interest.' },
+			{ q: 'What is Robinhood Gold margin rate?', a: 'Robinhood Gold members pay 5.75% annual interest on margin borrowing above $1,000. This is competitive compared to traditional brokers who often charge 8-13%.' },
+			{ q: 'Is Robinhood safe for margin trading?', a: 'Robinhood is SEC/FINRA regulated and SIPC insured (up to $500,000). However, margin trading itself carries risk regardless of platform. Start with small amounts and understand the risks.' },
+			{ q: 'Can I day trade on Robinhood margin?', a: 'Yes, but the Pattern Day Trader rule applies: if you make 4+ day trades in 5 business days, you need at least $25,000 in your account.' }
+		]
 	}
 ];
 
@@ -972,4 +1227,12 @@ export function getTraditionalExchanges() {
 
 export function getAllExchanges() {
 	return exchanges;
+}
+
+export function getForexExchanges() {
+	return exchanges.filter(e => e.type === 'traditional' && ['ig-markets', 'xtb', 'plus500', 'etoro'].includes(e.slug));
+}
+
+export function getStockExchanges() {
+	return exchanges.filter(e => e.type === 'traditional' && ['interactive-brokers', 'robinhood', 'etoro'].includes(e.slug));
 }

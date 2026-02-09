@@ -1790,6 +1790,443 @@ Use these tools — don't rely on mental math for something this important.
 		],
 		relatedGuides: ['margin-trading-risks', 'cross-margin-vs-isolated-margin', 'leverage-ratios-explained'],
 		relatedGlossary: ['liquidation', 'maintenance-margin', 'leverage', 'mark-price']
+	},
+	{
+		slug: 'position-sizing-for-leveraged-trades',
+		title: 'Position Sizing for Leveraged Trades: Complete Guide',
+		metaDescription: 'Learn how to calculate the right position size for margin trading. Master the formulas, risk management rules, and tools for proper position sizing.',
+		category: 'Strategy',
+		readTime: 11,
+		lastUpdated: '2026-02-01',
+		content: `
+Position sizing is the single most important risk management skill for margin traders. It determines how much of your capital you allocate to each trade, directly controlling your risk exposure and potential returns. Getting position sizing wrong is the #1 reason margin traders blow up their accounts.
+
+## Why Position Sizing Matters More Than Entry Points
+
+Most beginner traders obsess over finding the perfect entry point. In reality, position sizing has a much larger impact on long-term profitability:
+
+- A great entry with terrible position sizing = blown account
+- A mediocre entry with proper position sizing = survivable, learnable
+- Consistent position sizing = consistent risk = sustainable trading career
+
+## The Core Position Sizing Formula
+
+**Position Size = (Account Balance × Risk Per Trade) / (Entry Price - Stop Loss Price)**
+
+This formula ensures that if your stop-loss is hit, you lose only your predetermined risk amount.
+
+### Example:
+- Account balance: $10,000
+- Risk per trade: 1% = $100
+- Entry price: $50,000 (BTC)
+- Stop-loss: $49,000 (2% below entry)
+- Position size = $100 / ($50,000 - $49,000) = 0.1 BTC = $5,000
+- Required leverage: $5,000 / $100 margin? No — your margin depends on leverage selected
+- At 5x leverage: Margin = $5,000 / 5 = $1,000
+
+## The Risk Percentage Rule
+
+### The 1% Rule (Conservative)
+Never risk more than 1% of your account on a single trade. This is the most widely recommended approach:
+- $10,000 account → max $100 risk per trade
+- After 10 consecutive losses: $9,000 remaining (90%)
+- Still very much in the game
+
+### The 2% Rule (Moderate)
+More aggressive but still sustainable:
+- $10,000 account → max $200 risk per trade
+- After 10 consecutive losses: $8,000 remaining (80%)
+- Acceptable for experienced traders
+
+### The 0.5% Rule (Ultra-Conservative)
+For beginners or very volatile markets:
+- $10,000 account → max $50 risk per trade
+- Extremely hard to blow up your account
+- Recommended for first 3-6 months of margin trading
+
+## Position Sizing and Leverage
+
+A critical insight: **position size and leverage are independent decisions**.
+
+- Position size determines your RISK (how much you can lose)
+- Leverage determines your CAPITAL EFFICIENCY (how much margin you use)
+
+### Same Risk, Different Leverage:
+| Scenario | Position | Leverage | Margin Used | Stop Loss | Risk |
+|----------|----------|----------|-------------|-----------|------|
+| A | $5,000 | 5x | $1,000 | 2% | $100 |
+| B | $5,000 | 10x | $500 | 2% | $100 |
+| C | $5,000 | 25x | $200 | 2% | $100 |
+
+All three scenarios risk exactly $100. Higher leverage just means less margin tied up — but the risk (determined by position size and stop-loss distance) is identical.
+
+## The Kelly Criterion (Advanced)
+
+The Kelly Criterion calculates the optimal bet size based on your win rate and average win/loss ratio:
+
+**Kelly % = W - [(1 - W) / R]**
+
+Where:
+- W = Win rate (e.g., 0.55 for 55%)
+- R = Average win / Average loss ratio (e.g., 1.5)
+
+Example: Kelly % = 0.55 - [(1 - 0.55) / 1.5] = 0.55 - 0.30 = 0.25 (25%)
+
+**Important**: Most traders use "Half Kelly" (12.5% in this example) or "Quarter Kelly" (6.25%) to reduce volatility. Full Kelly is extremely aggressive.
+
+## Position Sizing by Market Conditions
+
+### Trending Markets
+- Use standard or slightly larger positions
+- Trends provide better risk-reward ratios
+- Stop-losses can be placed at clear technical levels
+
+### Ranging/Choppy Markets
+- Reduce position sizes by 25-50%
+- More false breakouts and whipsaws
+- Tighter stop-losses lead to more frequent small losses
+
+### High Volatility (News Events)
+- Reduce position sizes by 50-75%
+- Gaps and slippage are more likely
+- Consider sitting out major announcements
+
+## Common Position Sizing Mistakes
+
+### Mistake #1: Fixed Lot Size
+Trading the same dollar amount regardless of stop-loss distance. This means wildly different risk per trade.
+
+### Mistake #2: "Gut Feel" Sizing
+No calculation, just picking a "round number" that feels right. This is gambling, not trading.
+
+### Mistake #3: Scaling Up After Wins
+Dramatically increasing position sizes after a winning streak, then giving it all back on the inevitable loss.
+
+### Mistake #4: Not Accounting for Fees
+Fees on leveraged positions are calculated on the full position size. A 0.05% fee on a $100,000 position is $50 — significant if your risk budget is $100.
+
+### Mistake #5: Ignoring Correlation
+Opening two positions on BTC and ETH with full position sizes is essentially doubling your risk, since they're highly correlated.
+
+## Position Sizing Calculator
+
+Use our free Position Size Calculator tool to quickly calculate the right position size for any trade:
+
+**Inputs needed:**
+1. Account balance
+2. Risk percentage per trade
+3. Entry price
+4. Stop-loss price
+
+**Our calculator outputs:**
+- Position size (in units and USD)
+- Maximum leverage needed
+- Margin required at various leverage levels
+
+Try it: [Position Size Calculator](/tools/position-size-calculator)
+
+*Disclaimer: Position sizing reduces risk but doesn't eliminate it. Markets can gap past stop-losses. This is educational content, not financial advice.*
+`,
+		faq: [
+			{ q: 'What percentage should I risk per trade?', a: 'Most professional traders risk 0.5-2% per trade. Beginners should start at 0.5-1%. The key is consistency — use the same risk percentage for every trade.' },
+			{ q: 'Does position size change with leverage?', a: 'No. Position size (and thus risk) is independent of leverage. Leverage only affects how much margin you need. You can have the same risk at 5x or 50x leverage.' },
+			{ q: 'How do I account for fees in position sizing?', a: 'Subtract expected fees from your risk budget. If your risk is $100 and fees are $20 (opening + closing), your effective stop-loss risk is $80.' },
+			{ q: 'Should I use the same position size for every trade?', a: 'You should use the same RISK PERCENTAGE, not the same dollar amount. Since stop-loss distances vary, position sizes will vary too.' }
+		],
+		relatedGuides: ['margin-trading-strategies', 'margin-trading-risks', 'leverage-ratios-explained'],
+		relatedGlossary: ['leverage', 'liquidation', 'isolated-margin']
+	},
+	{
+		slug: 'hedging-with-margin-trading',
+		title: 'Hedging with Margin Trading: Protect Your Portfolio',
+		metaDescription: 'Learn how to use margin trading to hedge your crypto and stock portfolio. Covers short hedges, delta-neutral strategies, and practical examples.',
+		category: 'Strategy',
+		readTime: 10,
+		lastUpdated: '2026-02-01',
+		content: `
+Hedging is one of the most legitimate and valuable uses of margin trading. Instead of speculating on price direction, hedging uses leveraged positions to protect existing investments from adverse price movements. It's like buying insurance for your portfolio.
+
+## What Is Hedging?
+
+Hedging means opening a position that profits when your main investment loses value, offsetting (or reducing) the loss. In margin trading, this usually means opening a short position against a long-term holding.
+
+### Simple Hedging Example:
+- You hold 1 BTC bought at $40,000 (long-term investment)
+- You're worried about a short-term correction
+- You open a 1 BTC short on perpetual futures
+- If BTC drops to $35,000:
+  - Your spot holdings lose $5,000
+  - Your short profits $5,000
+  - **Net result: $0 change** (you're "hedged")
+
+## Types of Hedging Strategies
+
+### 1. Full Hedge (Delta Neutral)
+Short the exact same amount as your long position.
+- **Protection**: 100% downside protection
+- **Cost**: You give up all upside too
+- **Use when**: You expect a significant drop but don't want to sell your holdings (tax reasons, staking, etc.)
+
+### 2. Partial Hedge
+Short a portion of your holdings (e.g., 50%).
+- **Protection**: Reduces losses by the hedged percentage
+- **Cost**: You keep partial upside exposure
+- **Use when**: You're uncertain and want to reduce risk without eliminating upside
+
+### 3. Options Hedge (Protective Put)
+Buy put options that profit when the price drops.
+- **Protection**: Full protection below the strike price
+- **Cost**: Premium paid for the option (fixed, known cost)
+- **Use when**: You want defined-cost insurance with unlimited upside potential
+
+### 4. Correlated Asset Hedge
+Short a correlated asset instead of the exact same one.
+- Example: Hold BTC, short ETH (high correlation)
+- **Protection**: Imperfect but often sufficient
+- **Cost**: Risk of correlation breakdown
+- **Use when**: Direct hedging is not available or too expensive
+
+## When to Hedge Your Portfolio
+
+### Before Major Events
+- FOMC meetings (interest rate decisions)
+- CPI data releases
+- Earnings announcements (for stocks)
+- Token unlock events (for crypto)
+- Regulatory announcements
+
+### During Uncertain Markets
+- When you can't determine a clear trend
+- When technical indicators show mixed signals
+- When macro conditions are deteriorating
+
+### For Tax Optimization
+- Instead of selling (triggering capital gains tax), hedge with a short
+- Maintain your long-term holding period
+- Remove the hedge when the risk passes
+
+## Practical Hedging Guide
+
+### Step 1: Determine What to Hedge
+Identify the specific assets and amounts you want to protect.
+
+### Step 2: Choose Your Instrument
+- **Perpetual futures**: Most common for crypto hedging
+- **Quarterly futures**: No funding rate costs
+- **Options**: Known cost, flexible strikes
+- **CFDs**: For traditional asset hedging
+
+### Step 3: Size Your Hedge
+- Full hedge: Match your spot position size 1:1
+- Partial hedge: Choose 25-75% based on your conviction
+
+### Step 4: Use Cross Margin
+Cross margin is ideal for hedging because profits from one side offset losses from the other, reducing liquidation risk.
+
+### Step 5: Monitor and Remove
+- Set a plan for when to remove the hedge
+- Don't forget about it — funding rates cost money
+- Remove when the event passes or market stabilizes
+
+## Hedging Costs
+
+### Funding Rates
+If you hold a short perpetual futures position during a bullish market (positive funding), you'll receive funding payments. In a bearish market, you'll pay them.
+
+### Opportunity Cost
+While fully hedged, you don't benefit from upside movements.
+
+### Slippage and Fees
+Opening and closing the hedge costs trading fees on both legs.
+
+### Basis Risk
+If hedging with a correlated (not identical) asset, the correlation can break down.
+
+## Real-World Hedging Scenarios
+
+### Scenario 1: BTC Holder Before FOMC
+You hold 2 BTC ($100,000) and want to protect against a hawkish surprise:
+- Open a 1 BTC short on perpetuals (50% hedge)
+- Use 2x leverage (margin: $25,000)
+- Cost: ~0.04% fees = $40 to open
+- If BTC drops 10%: Lose $10,000 on spot, gain $5,000 on short = net -$5,000 (vs -$10,000 unhedged)
+- If BTC rises 10%: Gain $10,000 on spot, lose $5,000 on short = net +$5,000
+
+### Scenario 2: Stock Portfolio Hedge
+You have $500,000 in US stocks and expect a market pullback:
+- Buy SPY put options or short SPY futures
+- Or use CFDs to short an index via IG Markets or IBKR
+- Protect against market-wide decline while keeping individual stock positions
+
+## Hedging Platforms
+
+### Best for Crypto Hedging:
+- **Binance**: Highest liquidity, lowest funding rates
+- **Bybit**: Clean interface, portfolio margin
+- **Kraken**: Best for US residents
+
+### Best for Stock/Portfolio Hedging:
+- **Interactive Brokers**: Lowest margin rates, widest product range
+- **IG Markets**: Spread betting (tax-free in UK) + CFDs
+
+*Disclaimer: Hedging reduces but does not eliminate risk. Imperfect hedges can still result in losses. This is educational content, not financial advice.*
+`,
+		faq: [
+			{ q: 'Is hedging the same as short selling?', a: 'No. Short selling is a speculative bet that the price will fall. Hedging uses short positions specifically to protect existing long holdings. The intent and risk profile are different.' },
+			{ q: 'Does hedging guarantee I won\'t lose money?', a: 'A perfect hedge (1:1 same asset) theoretically prevents losses, but also prevents gains. Partial hedges reduce but don\'t eliminate risk. Costs like funding rates and fees apply.' },
+			{ q: 'When should I remove a hedge?', a: 'Remove it when the event you were hedging against has passed, when your market outlook changes, or when the cost of maintaining the hedge outweighs the protection.' },
+			{ q: 'Can I hedge crypto in the USA?', a: 'Yes. Kraken offers futures trading for US residents which can be used for hedging. dYdX is another option for non-custodial hedging.' }
+		],
+		relatedGuides: ['margin-trading-strategies', 'short-selling-with-margin', 'cross-margin-vs-isolated-margin'],
+		relatedGlossary: ['cross-margin', 'funding-rate', 'leverage']
+	},
+	{
+		slug: 'crypto-futures-vs-margin-trading',
+		title: 'Crypto Futures vs Margin Trading: Key Differences Explained',
+		metaDescription: 'Understand the difference between crypto futures trading and spot margin trading. Compare mechanics, costs, leverage, and which is right for you.',
+		category: 'Basics',
+		readTime: 10,
+		lastUpdated: '2026-02-01',
+		content: `
+"Futures trading" and "margin trading" in crypto are often confused because both involve leverage. But they work differently under the hood, with distinct cost structures, risk profiles, and use cases. This guide clarifies the differences.
+
+## Quick Comparison
+
+| Feature | Spot Margin Trading | Futures Trading |
+|---------|-------------------|-----------------|
+| What you trade | Actual cryptocurrency | Derivative contracts |
+| Ownership | You own the crypto | You hold a contract |
+| Leverage | Usually 3-10x | Up to 125-200x |
+| Cost | Interest on borrowed funds | Funding rates (perps) / premium (delivery) |
+| Settlement | Buy/sell real crypto | Cash or delivery settlement |
+| Markets | Spot market | Derivatives market |
+| Best for | Medium-term positions | Short-term trading, hedging |
+
+## How Spot Margin Trading Works
+
+In spot margin trading, you borrow actual cryptocurrency or stablecoins from the exchange (or other lenders) to buy or sell real crypto assets.
+
+### Going Long on Spot Margin:
+1. You have $1,000 USDT
+2. You borrow $4,000 USDT from the exchange (5x leverage)
+3. You buy $5,000 worth of BTC — you own the actual BTC
+4. BTC rises 10% → Your BTC is now worth $5,500
+5. Sell BTC, repay $4,000 + interest
+6. Profit: ~$500 minus interest and fees
+
+### Going Short on Spot Margin:
+1. You have $1,000 USDT as collateral
+2. You borrow 0.1 BTC from the exchange
+3. You sell 0.1 BTC for $5,000 (at $50,000/BTC)
+4. BTC drops to $45,000
+5. Buy back 0.1 BTC for $4,500
+6. Return 0.1 BTC, keep $500 profit minus interest
+
+### Key Characteristics:
+- You own the actual crypto while the position is open
+- You pay daily interest on borrowed funds (0.01-0.06%/day)
+- Lower leverage available (typically 3-10x)
+- Interest rates vary by asset and demand
+
+## How Futures Trading Works
+
+Futures trading involves contracts that track a cryptocurrency's price. You never own the underlying asset.
+
+### Perpetual Futures (Most Popular):
+1. You deposit $1,000 USDT as margin
+2. Open a 10x long BTC/USDT perpetual contract ($10,000 position)
+3. No borrowing — it's a contract, not a loan
+4. BTC rises 10% → Your PnL is +$1,000 (100% return)
+5. Close the contract, receive profit in USDT
+
+### Delivery/Quarterly Futures:
+- Have an expiration date (e.g., March 2026)
+- Settle at the spot price on expiry
+- No funding rates (but premium/discount exists)
+- Used for hedging and basis trading
+
+### Key Characteristics:
+- No asset ownership — purely synthetic exposure
+- Higher leverage (up to 125-200x)
+- Funding rates every 8 hours (perpetuals only)
+- Mark price used for liquidation (manipulation-resistant)
+- More complex margining with tiers
+
+## Cost Comparison
+
+### Spot Margin Costs:
+- **Interest rate**: 0.01-0.06% per day on borrowed amount
+- **Trading fees**: Standard spot trading fees
+- **Example**: Borrowing $10,000 at 0.03%/day = $3/day = $1,095/year
+
+### Futures Costs:
+- **Funding rate**: ~0.01% per 8 hours (normal market) on full position
+- **Trading fees**: Usually lower than spot (0.02%/0.04-0.06%)
+- **Example**: $10,000 position, 0.01%/8hr = $1/8hr = $3/day = $1,095/year
+
+In normal market conditions, costs are similar. But during extreme bullish periods, futures funding rates can spike to 0.1%+ per 8 hours, making them very expensive for long positions.
+
+## When to Use Spot Margin
+
+- You want to **own the actual crypto** (e.g., for staking rewards, governance)
+- You need **lower leverage** (3-10x suits your strategy)
+- You're making **medium to long-term** positions
+- You want to **lend your crypto** to margin traders for interest
+- You need to **short sell** an actual asset for delivery
+
+## When to Use Futures
+
+- You want **higher leverage** (10x-125x)
+- You're **day trading** or **scalping**
+- You want to **hedge** existing holdings
+- You prefer **not owning** the underlying asset
+- You want **mark price** liquidation protection
+- You want access to **more advanced order types**
+
+## Both Together: The Basis Trade
+
+One popular strategy uses both spot margin and futures:
+
+1. Buy BTC on spot
+2. Short BTC on perpetual futures (same size)
+3. You're delta-neutral (no directional exposure)
+4. Collect funding rate payments when funding is positive
+5. Essentially earning yield on your BTC
+
+This "cash and carry" or "basis trade" is one of the most common institutional strategies in crypto.
+
+## Platform Support
+
+| Platform | Spot Margin | Perpetual Futures | Delivery Futures |
+|----------|------------|-------------------|------------------|
+| Binance | ✅ (10x) | ✅ (125x) | ✅ |
+| Bybit | ✅ (10x) | ✅ (100x) | ❌ |
+| OKX | ✅ (10x) | ✅ (125x) | ✅ |
+| Kraken | ✅ (5x) | ✅ (50x) | ❌ |
+| KuCoin | ✅ (10x) | ✅ (100x) | ❌ |
+| dYdX | ❌ | ✅ (20x) | ❌ |
+
+## Which Is Right for You?
+
+| Trader Type | Recommended | Reason |
+|------------|-------------|--------|
+| Beginner | Spot margin (3x) | Simpler, lower risk |
+| Day trader | Futures (5-20x) | Higher leverage, lower fees |
+| Swing trader | Either | Depends on timeframe |
+| Hedger | Futures | Easier to hedge with perps |
+| Income seeker | Spot margin lending | Earn interest from lenders |
+| Institutional | Both | Basis trades, hedging |
+
+*Disclaimer: Both spot margin and futures trading involve substantial risk. This is educational content, not financial advice.*
+`,
+		faq: [
+			{ q: 'Is futures trading riskier than spot margin?', a: 'Futures allow higher leverage (125x+ vs 10x), which means higher potential risk. However, the actual risk depends on your position size and leverage chosen, not the product itself.' },
+			{ q: 'Do I own crypto with futures trading?', a: 'No. Futures are contracts that track a crypto\'s price. You never own the underlying asset. For actual ownership, use spot margin trading.' },
+			{ q: 'Which has lower fees?', a: 'Futures typically have lower trading fees (0.02%/0.04% vs 0.1% for spot). However, funding rates on perpetuals can add up for long-term positions.' },
+			{ q: 'Can I use both at the same time?', a: 'Yes, and many traders do. A common strategy is buying spot and shorting futures for funding rate arbitrage (basis trading).' }
+		],
+		relatedGuides: ['what-is-margin-trading', 'crypto-margin-trading', 'margin-vs-leverage-trading'],
+		relatedGlossary: ['perpetual-contract', 'futures-contract', 'funding-rate', 'leverage']
 	}
 ];
 

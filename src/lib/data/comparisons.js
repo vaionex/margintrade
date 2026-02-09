@@ -67,10 +67,10 @@ export const comparisons = [
 		]
 	},
 	{
-		slug: 'kraken-vs-binance',
-		exchange1: 'kraken',
-		exchange2: 'binance',
-		title: 'Kraken vs Binance: Which Is Better for Margin Trading? 2026',
+		slug: 'binance-vs-kraken',
+		exchange1: 'binance',
+		exchange2: 'kraken',
+		title: 'Binance vs Kraken: Which Is Better for Margin Trading? 2026',
 		metaDescription: 'Kraken vs Binance margin trading comparison. We compare US availability, fees, leverage, regulation, and security to help you decide.',
 		intro: 'Kraken and Binance represent different philosophies in crypto exchange design. Kraken prioritizes regulatory compliance and security, making it one of the few options for US margin traders. Binance maximizes features, trading pairs, and leverage for global traders.',
 		verdict: 'For US residents, Kraken is the clear winner as Binance is not available. For non-US traders who want maximum features and liquidity, Binance is superior. Kraken wins on trust and regulation.',
@@ -129,9 +129,9 @@ export const comparisons = [
 		]
 	},
 	{
-		slug: 'etoro-vs-interactive-brokers',
-		exchange1: 'etoro',
-		exchange2: 'interactive-brokers',
+		slug: 'interactive-brokers-vs-etoro',
+		exchange1: 'interactive-brokers',
+		exchange2: 'etoro',
 		title: 'eToro vs Interactive Brokers: Margin Trading Comparison 2026',
 		metaDescription: 'eToro vs Interactive Brokers for margin trading. Compare fees, margin rates, platforms, and features for stocks, forex, and crypto margin trading.',
 		intro: 'eToro and Interactive Brokers (IBKR) represent two ends of the margin trading spectrum. eToro caters to beginners with social trading and a simple interface, while IBKR targets experienced traders with the lowest margin rates and access to global markets. This comparison helps you choose based on your experience level and needs.',
@@ -161,67 +161,70 @@ export const comparisons = [
 		]
 	},
 	{
-		slug: 'binance-vs-kraken',
-		exchange1: 'binance',
-		exchange2: 'kraken',
-		title: 'Binance vs Kraken: Crypto Margin Trading Compared 2026',
-		metaDescription: 'Binance vs Kraken margin trading comparison. Which crypto exchange is better for leverage trading? Compare fees, leverage, and US availability.',
-		intro: 'Binance and Kraken are two very different crypto exchanges. Binance is the volume king with maximum features. Kraken is the trusted veteran with US availability. For margin traders, the choice depends on your location and priorities.',
-		verdict: 'US traders should choose Kraken. Global traders wanting maximum features and leverage should choose Binance. Both are excellent exchanges.',
+		slug: 'kraken-vs-coinbase',
+		exchange1: 'kraken',
+		exchange2: 'coinbase',
+		title: 'Kraken vs Coinbase: Best US Crypto Margin Trading 2026',
+		metaDescription: 'Kraken vs Coinbase for margin trading in the USA. Compare fees, leverage options, regulation, and features for US-based crypto traders.',
+		intro: 'For US-based crypto traders seeking margin trading, Kraken and Coinbase are the two most prominent regulated options. Kraken offers more robust margin and futures trading, while Coinbase is the most mainstream US exchange. This comparison helps US traders choose the right platform for leveraged trading.',
+		verdict: 'Kraken is the clear winner for US margin trading with up to 50x leverage on futures and 5x on spot margin. Coinbase offers limited margin features through Coinbase Advanced but does not match Kraken\'s derivatives offering.',
 		comparison: {
-			fees: 'Binance has lower fees, especially with BNB discounts.',
-			leverage: 'Binance: 125x max vs Kraken: 50x max.',
-			platform: 'Binance has more features. Kraken has a cleaner interface.',
-			security: 'Kraken has never been hacked. Binance had a 2019 incident but recovered fully.',
-			support: 'Kraken support is generally more responsive.',
-			beginners: 'Kraken is more beginner-friendly.'
+			fees: 'Kraken has lower fees for margin trading, especially on futures (0.02% maker / 0.05% taker). Coinbase Advanced charges 0.04% maker / 0.06% taker.',
+			leverage: 'Kraken offers up to 50x on futures and 5x on spot margin. Coinbase has very limited leverage options for US users.',
+			platform: 'Coinbase has the simpler interface and larger user base. Kraken Pro offers more professional trading tools and margin features.',
+			security: 'Both are excellent — Kraken has never been hacked (since 2011), and Coinbase is publicly traded (NASDAQ: COIN) with strong institutional backing.',
+			support: 'Both offer adequate support for US customers.',
+			beginners: 'Coinbase is more beginner-friendly for simple trading. Kraken is better for those specifically wanting margin trading.'
 		},
 		categories: [
-			{ name: 'US Availability', winner: 'kraken', details: 'Kraken available; Binance restricted' },
-			{ name: 'Fees', winner: 'binance', details: 'Lower overall trading fees' },
-			{ name: 'Leverage', winner: 'binance', details: '125x vs 50x' },
-			{ name: 'Trading Pairs', winner: 'binance', details: '1800+ vs 600+' },
-			{ name: 'Security', winner: 'kraken', details: 'Never hacked' },
-			{ name: 'Regulation', winner: 'kraken', details: 'More licenses, stronger compliance' }
+			{ name: 'Margin Trading Features', winner: 'kraken', details: 'Full margin + futures vs limited margin' },
+			{ name: 'Max Leverage', winner: 'kraken', details: '50x futures vs limited leverage' },
+			{ name: 'Trading Fees', winner: 'kraken', details: 'Lower maker/taker fees' },
+			{ name: 'User Base', winner: 'coinbase', details: 'Largest US exchange by users' },
+			{ name: 'Ease of Use', winner: 'coinbase', details: 'Simpler for beginners' },
+			{ name: 'Security', winner: 'tie', details: 'Both excellent, publicly audited' },
+			{ name: 'Regulation', winner: 'tie', details: 'Both SEC/FINRA registered' }
 		],
 		faq: [
-			{ q: 'Can Americans use Binance?', a: 'No. US residents must use Binance.US which has limited margin trading features. Kraken is the better US option.' },
-			{ q: 'Which is safer?', a: 'Kraken has a perfect security record. Both are safe, but Kraken\'s never-hacked status gives it an edge.' }
+			{ q: 'Can I margin trade crypto in the USA?', a: 'Yes. Kraken offers margin trading (up to 5x spot, 50x futures) to eligible US residents. Coinbase has more limited margin offerings. Both are regulated by US authorities.' },
+			{ q: 'Is Kraken or Coinbase more regulated?', a: 'Both are well-regulated. Coinbase is publicly traded on NASDAQ, while Kraken holds multiple state licenses and is one of the longest-operating US exchanges (since 2011).' },
+			{ q: 'Which has lower fees for US traders?', a: 'Kraken generally has lower fees for margin trading, especially on futures contracts. Coinbase Pro/Advanced fees are competitive but slightly higher.' }
 		]
 	},
 	{
-		slug: 'okx-vs-kucoin',
-		exchange1: 'okx',
-		exchange2: 'kucoin',
-		title: 'OKX vs KuCoin: Margin Trading Comparison 2026',
-		metaDescription: 'OKX vs KuCoin for margin trading. Compare leverage, fees, margin modes, and altcoin selection for derivatives traders.',
-		intro: 'OKX and KuCoin are popular alternatives to Binance, each with unique strengths. OKX excels in advanced margin features, while KuCoin shines in altcoin variety and its lending market. This comparison covers everything margin traders need to know.',
-		verdict: 'OKX is better for serious margin traders with its portfolio margin and higher leverage. KuCoin is better for altcoin margin trading and earning passive income through lending.',
+		slug: 'kucoin-vs-gate-io',
+		exchange1: 'kucoin',
+		exchange2: 'gate-io',
+		title: 'KuCoin vs Gate.io: Altcoin Margin Trading Comparison 2026',
+		metaDescription: 'KuCoin vs Gate.io for margin trading. Compare altcoin selection, fees, features, and lending markets for crypto margin traders.',
+		intro: 'KuCoin and Gate.io are both known as "altcoin havens," offering margin trading on a wide selection of tokens beyond the top 50. For traders who want to leverage trade smaller-cap cryptocurrencies, this comparison is essential.',
+		verdict: 'Gate.io has more trading pairs and longer history. KuCoin has better user experience and a superior lending market. Both are solid for altcoin margin trading.',
 		comparison: {
-			fees: 'OKX has slightly lower fees (0.02%/0.05% vs 0.02%/0.06%).',
-			leverage: 'OKX offers higher leverage (125x vs 100x).',
-			platform: 'OKX has more advanced margin features. KuCoin has better altcoin discovery.',
-			security: 'OKX has a cleaner security record. KuCoin was hacked in 2020 but recovered.',
-			support: 'Both have adequate support.',
-			beginners: 'KuCoin is slightly more beginner-friendly with its lending feature.'
+			fees: 'Gate.io has lower maker fees (0.015% vs 0.02%). Taker fees are similar.',
+			leverage: 'Both offer up to 100x on futures. Comparable leverage options.',
+			platform: 'KuCoin has a more user-friendly interface. Gate.io has more features but can feel cluttered.',
+			security: 'KuCoin was hacked in 2020 but recovered. Gate.io has had no major recent incidents.',
+			support: 'KuCoin generally has better support.',
+			beginners: 'KuCoin is more beginner-friendly overall.'
 		},
 		categories: [
-			{ name: 'Fees', winner: 'okx', details: 'Lower taker fees' },
-			{ name: 'Leverage', winner: 'okx', details: '125x vs 100x' },
-			{ name: 'Margin Modes', winner: 'okx', details: 'Portfolio + multi-currency margin' },
-			{ name: 'Altcoin Selection', winner: 'kucoin', details: 'Better for altcoin margin' },
-			{ name: 'Lending Market', winner: 'kucoin', details: 'Earn interest on margin assets' },
-			{ name: 'Security', winner: 'okx', details: 'No major incidents' }
+			{ name: 'Trading Pairs', winner: 'gate-io', details: '1700+ vs 900+' },
+			{ name: 'Maker Fees', winner: 'gate-io', details: '0.015% vs 0.02%' },
+			{ name: 'Lending Market', winner: 'kucoin', details: 'More developed lending ecosystem' },
+			{ name: 'User Experience', winner: 'kucoin', details: 'Cleaner interface' },
+			{ name: 'History', winner: 'gate-io', details: 'Founded 2013 vs 2017' },
+			{ name: 'Security', winner: 'gate-io', details: 'No major incidents' },
+			{ name: 'New Token Listings', winner: 'tie', details: 'Both list new tokens early' }
 		],
 		faq: [
-			{ q: 'Which has more altcoins for margin trading?', a: 'KuCoin offers margin trading on more altcoins, making it better for diversified margin strategies on smaller-cap tokens.' },
-			{ q: 'Is OKX portfolio margin worth it?', a: 'If you trade multiple positions, OKX portfolio margin can significantly reduce your margin requirements by offsetting risk across positions.' }
+			{ q: 'Which has more altcoins?', a: 'Gate.io has more trading pairs (1700+ vs 900+), making it the better choice for margin trading on obscure altcoins.' },
+			{ q: 'Can I earn interest on both platforms?', a: 'Both offer lending/earn features, but KuCoin\'s lending market is more developed with better interest rates and more active borrowing.' }
 		]
 	},
 	{
-		slug: 'bitget-vs-mexc',
-		exchange1: 'bitget',
-		exchange2: 'mexc',
+		slug: 'mexc-vs-bitget',
+		exchange1: 'mexc',
+		exchange2: 'bitget',
 		title: 'Bitget vs MEXC: Which Exchange for Margin Trading? 2026',
 		metaDescription: 'Bitget vs MEXC margin trading comparison. Compare fees, leverage (125x vs 200x), copy trading, and features.',
 		intro: 'Bitget and MEXC are fast-growing crypto exchanges competing for margin traders. Bitget leads in copy trading, while MEXC offers the highest leverage (200x) and zero maker fees. This comparison helps you choose the right platform.',
@@ -280,33 +283,97 @@ export const comparisons = [
 		]
 	},
 	{
-		slug: 'gate-io-vs-kucoin',
-		exchange1: 'gate-io',
-		exchange2: 'kucoin',
-		title: 'Gate.io vs KuCoin: Altcoin Margin Trading Comparison 2026',
-		metaDescription: 'Gate.io vs KuCoin for margin trading. Compare altcoin selection, fees, features, and lending markets for crypto margin traders.',
-		intro: 'Gate.io and KuCoin are both known as "altcoin havens," offering margin trading on a wide selection of tokens beyond the top 50. For traders who want to leverage trade smaller-cap cryptocurrencies, this comparison is essential.',
-		verdict: 'Gate.io has more trading pairs and longer history. KuCoin has better user experience and a superior lending market. Both are good for altcoin margin trading.',
+		slug: 'binance-vs-mexc',
+		exchange1: 'binance',
+		exchange2: 'mexc',
+		title: 'Binance vs MEXC Fees: Which Exchange Is Cheaper? 2026',
+		metaDescription: 'Binance vs MEXC fee comparison for margin trading. Compare maker/taker fees, funding rates, and total cost of trading on both exchanges.',
+		intro: 'Binance and MEXC are two of the most cost-competitive crypto exchanges for margin trading. Binance offers the highest liquidity with low fees, while MEXC stands out with zero maker fees and the lowest taker fee in the industry. This fee-focused comparison helps active traders minimize costs.',
+		verdict: 'MEXC is cheaper for high-volume traders with zero maker fees and 0.02% taker fees. Binance offers better liquidity and a more established platform. For pure cost optimization, MEXC wins. For overall value, Binance edges ahead.',
 		comparison: {
-			fees: 'Gate.io has lower maker fees (0.015% vs 0.02%). Taker fees are similar.',
-			leverage: 'Both offer up to 100x on futures. Comparable leverage options.',
-			platform: 'KuCoin has a more user-friendly interface. Gate.io has more features but can feel cluttered.',
-			security: 'KuCoin was hacked in 2020 but recovered. Gate.io has had no major recent incidents.',
-			support: 'KuCoin generally has better support.',
-			beginners: 'KuCoin is more beginner-friendly overall.'
+			fees: 'MEXC has zero maker fees and 0.02% taker vs Binance\'s 0.02% maker and 0.04% taker. MEXC is roughly 50% cheaper on a pure fee basis.',
+			leverage: 'MEXC offers 200x max vs Binance\'s 125x, though neither extreme is recommended.',
+			platform: 'Binance has a more polished and feature-rich platform.',
+			security: 'Binance is more established with stronger security infrastructure. MEXC is newer with less track record.',
+			support: 'Binance has better customer support overall.',
+			beginners: 'Binance has more educational resources. MEXC\'s zero-fee structure benefits cost-conscious beginners.'
 		},
 		categories: [
-			{ name: 'Trading Pairs', winner: 'gate-io', details: '1700+ vs 900+' },
-			{ name: 'Maker Fees', winner: 'gate-io', details: '0.015% vs 0.02%' },
-			{ name: 'Lending Market', winner: 'kucoin', details: 'More developed lending ecosystem' },
-			{ name: 'User Experience', winner: 'kucoin', details: 'Cleaner interface' },
-			{ name: 'History', winner: 'gate-io', details: 'Founded 2013 vs 2017' },
-			{ name: 'Security', winner: 'gate-io', details: 'No major incidents' },
-			{ name: 'New Token Listings', winner: 'tie', details: 'Both list new tokens early' }
+			{ name: 'Maker Fees', winner: 'mexc', details: '0% vs 0.02%' },
+			{ name: 'Taker Fees', winner: 'mexc', details: '0.02% vs 0.04%' },
+			{ name: 'Liquidity', winner: 'binance', details: 'Highest in the market' },
+			{ name: 'Trading Pairs', winner: 'mexc', details: '2300+ vs 1800+' },
+			{ name: 'Max Leverage', winner: 'mexc', details: '200x vs 125x' },
+			{ name: 'Security', winner: 'binance', details: 'More established infrastructure' },
+			{ name: 'Platform Quality', winner: 'binance', details: 'More features and polish' }
 		],
 		faq: [
-			{ q: 'Which has more altcoins?', a: 'Gate.io has more trading pairs (1700+ vs 900+), making it the better choice for margin trading on obscure altcoins.' },
-			{ q: 'Can I earn interest on both platforms?', a: 'Both offer lending/earn features, but KuCoin\'s lending market is more developed with better interest rates and more active borrowing.' }
+			{ q: 'Which has lower fees overall?', a: 'MEXC has lower direct trading fees with zero maker fees and 0.02% taker. However, Binance\'s higher liquidity means less slippage, which can offset the fee difference for large orders.' },
+			{ q: 'Is MEXC safe compared to Binance?', a: 'Binance is more established with stronger security infrastructure, a SAFU fund, and more regulatory licenses. MEXC is legitimate but newer with less transparency on security measures.' }
+		]
+	},
+	{
+		slug: 'dydx-vs-centralized-exchanges',
+		exchange1: 'dydx',
+		exchange2: 'binance',
+		title: 'dYdX vs Centralized Exchanges: DEX vs CEX Margin Trading 2026',
+		metaDescription: 'Compare dYdX (decentralized) with centralized exchanges for margin trading. Understand the tradeoffs between decentralization and traditional exchanges.',
+		intro: 'The rise of decentralized exchanges (DEXs) like dYdX has created a genuine alternative to centralized exchanges (CEXs) for margin trading. This comparison examines the fundamental tradeoffs between trading on dYdX versus centralized platforms like Binance, Bybit, and OKX.',
+		verdict: 'Centralized exchanges (Binance, Bybit) are better for most traders with higher liquidity, more pairs, and higher leverage. dYdX is ideal for traders who prioritize self-custody, privacy, and decentralization over convenience.',
+		comparison: {
+			fees: 'dYdX charges 0.02% maker / 0.05% taker, comparable to CEXs. However, there are additional gas/bridge costs to deposit funds.',
+			leverage: 'CEXs offer 100-200x leverage. dYdX offers max 20x, prioritizing safety over extreme leverage.',
+			platform: 'CEX platforms are more polished with more features. dYdX\'s interface is functional but simpler.',
+			security: 'dYdX eliminates exchange counterparty risk (your keys, your coins). CEXs can be hacked or collapse (see FTX). The tradeoff is smart contract risk on dYdX.',
+			support: 'CEXs offer customer support. dYdX is community-supported with no central customer service.',
+			beginners: 'CEXs are far more beginner-friendly. dYdX requires crypto wallet setup and blockchain knowledge.'
+		},
+		categories: [
+			{ name: 'Self-Custody', winner: 'dydx', details: 'Non-custodial: you control your funds' },
+			{ name: 'Privacy/No KYC', winner: 'dydx', details: 'No identity verification required' },
+			{ name: 'Liquidity', winner: 'binance', details: 'Much higher volume and order book depth' },
+			{ name: 'Trading Pairs', winner: 'binance', details: '1800+ vs ~180' },
+			{ name: 'Max Leverage', winner: 'binance', details: '125x vs 20x' },
+			{ name: 'Counterparty Risk', winner: 'dydx', details: 'No exchange can freeze your funds' },
+			{ name: 'Ease of Use', winner: 'binance', details: 'Much simpler for all users' },
+			{ name: 'Fees', winner: 'tie', details: 'Comparable trading fees' }
+		],
+		faq: [
+			{ q: 'Is dYdX safer than Binance?', a: 'It depends on the risk type. dYdX eliminates exchange counterparty risk (no one can freeze or steal your funds like FTX). However, dYdX has smart contract risk and lower liquidity. Binance has stronger infrastructure but requires trusting a central entity with your funds.' },
+			{ q: 'Can I use dYdX in the USA?', a: 'The dYdX protocol is globally accessible, but the official dYdX Trading front-end has restricted US users. Alternative front-ends may exist, but US users should consider regulatory implications.' },
+			{ q: 'Why is dYdX leverage limited to 20x?', a: 'dYdX chose conservative leverage limits to prioritize protocol safety and reduce systemic risk. This reflects a different philosophy than CEXs that compete on maximum leverage.' }
+		]
+	},
+	{
+		slug: 'robinhood-vs-interactive-brokers',
+		exchange1: 'robinhood',
+		exchange2: 'interactive-brokers',
+		title: 'Robinhood vs Interactive Brokers: US Margin Trading Comparison 2026',
+		metaDescription: 'Robinhood vs Interactive Brokers for margin trading. Compare margin rates, features, and value for US stock investors.',
+		intro: 'Robinhood and Interactive Brokers represent opposite ends of the US brokerage spectrum. Robinhood is the beginner-friendly app that popularized commission-free trading. Interactive Brokers is the professional-grade platform with the lowest margin rates in the industry. Which is better for margin trading?',
+		verdict: 'Interactive Brokers is objectively superior for margin trading with lower rates, more products, and professional tools. Robinhood is adequate for basic stock margin trading and wins on simplicity for complete beginners.',
+		comparison: {
+			fees: 'IBKR has dramatically lower margin rates (5.33%+ vs 5.75% Gold / 12% standard). For large balances, IBKR is significantly cheaper.',
+			leverage: 'Both offer Reg T (2x) for standard accounts. IBKR offers Portfolio Margin (up to ~6.7x) for accounts over $110K. Robinhood has no equivalent.',
+			platform: 'IBKR\'s Trader Workstation is extremely powerful but complex. Robinhood\'s app is beautiful and simple but lacks advanced features.',
+			security: 'Both are SEC/FINRA regulated and SIPC insured. IBKR has $400B+ in client equity and is publicly traded.',
+			support: 'Robinhood has in-app support. IBKR has more comprehensive but less accessible support.',
+			beginners: 'Robinhood wins hands-down for beginners. IBKR has a steep learning curve.'
+		},
+		categories: [
+			{ name: 'Margin Rates', winner: 'interactive-brokers', details: '5.33%+ vs 5.75%-12%' },
+			{ name: 'Portfolio Margin', winner: 'interactive-brokers', details: 'Up to ~6.7x leverage for qualifying accounts' },
+			{ name: 'Global Markets', winner: 'interactive-brokers', details: '150+ markets vs US only' },
+			{ name: 'Platform Power', winner: 'interactive-brokers', details: 'Professional-grade tools' },
+			{ name: 'Ease of Use', winner: 'robinhood', details: 'Much simpler for beginners' },
+			{ name: 'Mobile App', winner: 'robinhood', details: 'Better mobile experience' },
+			{ name: 'Fractional Shares', winner: 'robinhood', details: 'Better fractional share support' },
+			{ name: 'Product Range', winner: 'interactive-brokers', details: 'Stocks, options, futures, forex, bonds, funds' }
+		],
+		faq: [
+			{ q: 'Which has lower margin rates?', a: 'Interactive Brokers has lower margin rates for balances over $100K (as low as 5.33%). Robinhood Gold charges 5.75% which is competitive for smaller accounts but cannot match IBKR for larger ones.' },
+			{ q: 'Is Robinhood good for margin trading?', a: 'Robinhood is adequate for basic stock margin trading with a simple interface and competitive Gold rates (5.75%). However, it lacks advanced features like portfolio margin, futures, and international markets.' },
+			{ q: 'What is Portfolio Margin on IBKR?', a: 'Portfolio Margin uses risk-based calculations instead of fixed Reg T percentages, potentially offering up to 6.7x leverage on diversified portfolios. It requires a minimum $110,000 account balance.' }
 		]
 	}
 ];
