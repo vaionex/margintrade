@@ -79,7 +79,7 @@
 		</div>
 
 		<!-- Animated Trading SVG Illustration -->
-		<div class="hero-illustration" style="position: relative; max-width: 900px; margin: 2rem auto 0;">
+		<div class="hero-illustration" style="position: relative; max-width: 900px; margin: 2rem auto 0; transform: translateX(-8%);">
 			<!-- Main chart card -->
 			<svg viewBox="0 0 560 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 75%; height: auto;">
 				<defs>
