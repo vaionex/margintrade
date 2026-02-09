@@ -91,6 +91,16 @@ ul, ol { margin: 0 0 1rem 1.5rem; color: var(--text-secondary); }
 li { margin-bottom: 0.5rem; }
 
 /* Tables */
+.table-wrap {
+	overflow-x: auto;
+	margin: 1.5rem 0;
+	border-radius: var(--radius);
+	border: 1px solid var(--border);
+}
+.table-wrap table {
+	margin: 0;
+}
+
 table {
 	width: 100%;
 	border-collapse: collapse;

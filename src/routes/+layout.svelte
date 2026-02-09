@@ -12,20 +12,9 @@
 <header class="site-header">
 	<div class="header-inner">
 		<a href="/" class="logo">
-			<svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-				<rect width="32" height="32" rx="8" fill="url(#logoGrad)" />
-				<path d="M8 22L12 14L16 18L20 10L24 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-				<path d="M20 10L24 10L24 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-				<defs>
-					<linearGradient id="logoGrad" x1="0" y1="0" x2="32" y2="32">
-						<stop offset="0%" stop-color="#3b82f6" />
-						<stop offset="100%" stop-color="#8b5cf6" />
-					</linearGradient>
-				</defs>
-			</svg>
-			<span class="logo-text">Margin<span class="logo-accent">Trade</span></span>
+			<span class="logo-icon">📊</span> MarginTrade
 		</a>
-		<button class="mobile-menu-toggle" onclick={() => menuOpen = !menuOpen}>
+		<button class="mobile-menu-toggle" onclick={() => menuOpen = !menuOpen} aria-label="Toggle menu">
 			{menuOpen ? '✕' : '☰'}
 		</button>
 		<nav class:open={menuOpen}>
@@ -45,27 +34,14 @@
 <footer class="site-footer">
 	<div class="footer-grid">
 		<div class="footer-about">
-			<a href="/" class="logo">
-				<svg width="24" height="24" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" class="logo-svg">
-					<rect width="32" height="32" rx="8" fill="url(#logoGradF)" />
-					<path d="M8 22L12 14L16 18L20 10L24 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-					<path d="M20 10L24 10L24 13" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-					<defs>
-						<linearGradient id="logoGradF" x1="0" y1="0" x2="32" y2="32">
-							<stop offset="0%" stop-color="#3b82f6" />
-							<stop offset="100%" stop-color="#8b5cf6" />
-						</linearGradient>
-					</defs>
-				</svg>
-				<span class="logo-text">Margin<span class="logo-accent">Trade</span></span>
-			</a>
+			<a href="/" class="logo"><span class="logo-icon">📊</span> MarginTrade</a>
 			<p>Your trusted resource for margin trading exchange reviews, comparisons, and educational guides. We help traders find the best platforms for leveraged trading.</p>
 		</div>
 		<div class="footer-col">
 			<h4>Exchanges</h4>
 			<ul>
-				<li><a href="/exchanges/crypto">Crypto Exchanges</a></li>
-				<li><a href="/exchanges/traditional">Traditional Brokers</a></li>
+				<li><a href="/platforms/crypto">Crypto Exchanges</a></li>
+				<li><a href="/platforms/stocks">Traditional Brokers</a></li>
 				<li><a href="/exchanges/binance">Binance Review</a></li>
 				<li><a href="/exchanges/bybit">Bybit Review</a></li>
 				<li><a href="/exchanges/kraken">Kraken Review</a></li>
@@ -89,12 +65,14 @@
 				<li><a href="/glossary">Glossary</a></li>
 				<li><a href="/about">About Us</a></li>
 				<li><a href="/contact">Contact</a></li>
-				<li><a href="/privacy">Privacy Policy</a></li>
 			</ul>
 		</div>
 	</div>
+	<div class="footer-disclaimer" style="margin-left: 1.5rem; margin-right: 1.5rem;">
+		<strong>⚠️ Risk Disclaimer:</strong> Margin trading involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The content on MarginTrade.com is for informational and educational purposes only. It should not be considered financial advice. You should consult a qualified financial advisor before making any trading decisions. We may receive compensation from partners featured on this site.
+	</div>
 	<div class="footer-bottom">
 		<p>&copy; {new Date().getFullYear()} MarginTrade.com — All rights reserved.</p>
-		<p>Disclaimer: MarginTrade contains affiliate links. We may earn a commission at no extra cost to you. Margin trading involves risk of loss. Not financial advice.</p>
+		<p>Independent margin trading research since 2024</p>
 	</div>
 </footer>

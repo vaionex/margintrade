@@ -16,28 +16,42 @@
 	}
 
 	function renderContent(content) {
-		return content
+		// First, extract and convert markdown tables
+		let html = content.replace(
+			/(^\|.+\|$\n?)+/gm,
+			(tableBlock) => {
+				const rows = tableBlock.trim().split('\n').filter(r => r.trim());
+				if (rows.length < 2) return tableBlock;
+
+				const parseRow = (row) => row.split('|').slice(1, -1).map(c => c.trim());
+				const headerCells = parseRow(rows[0]);
+
+				// Check if row 2 is a separator (---|---|---)
+				const isSep = /^\|[\s\-:|]+\|$/.test(rows[1]);
+				const dataRows = isSep ? rows.slice(2) : rows.slice(1);
+
+				const thead = '<thead><tr>' + headerCells.map(c => `<th>${c}</th>`).join('') + '</tr></thead>';
+				const tbody = '<tbody>' + dataRows.map(row => {
+					const cells = parseRow(row);
+					return '<tr>' + cells.map(c => `<td>${c}</td>`).join('') + '</tr>';
+				}).join('') + '</tbody>';
+
+				return `<div class="table-wrap"><table>${thead}${tbody}</table></div>`;
+			}
+		);
+
+		// Then handle the rest of markdown
+		html = html
 			.replace(/^### (.+)$/gm, (_, t) => `<h3 id="${t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')}">${t}</h3>`)
 			.replace(/^## (.+)$/gm, (_, t) => `<h2 id="${t.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-+$/, '')}">${t}</h2>`)
 			.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-			.replace(/^\|(.+)\|$/gm, (match) => {
-				const cells = match.split('|').filter(c => c.trim());
-				return '<tr>' + cells.map(c => `<td>${c.trim()}</td>`).join('') + '</tr>';
-			})
-			.replace(/(<tr>.*<\/tr>\n?)+/g, (match) => {
-				const rows = match.trim().split('\n').filter(r => r.trim());
-				if (rows.length < 2) return match;
-				const header = rows[0].replace(/<td>/g, '<th>').replace(/<\/td>/g, '</th>');
-				const sep = rows[1];
-				const isSep = sep && /^<tr>(<td>\s*[-:]+\s*<\/td>)+<\/tr>$/.test(sep);
-				const body = isSep ? rows.slice(2).join('\n') : rows.slice(1).join('\n');
-				return `<div class="table-wrap"><table><thead>${header}</thead><tbody>${body}</tbody></table></div>`;
-			})
 			.replace(/^- (.*$)/gm, '<li>$1</li>')
 			.replace(/(<li>.*<\/li>\n?)+/g, '<ul>$&</ul>')
 			.replace(/^(\d+)\. (.*$)/gm, '<li>$2</li>')
 			.replace(/\n{2,}/g, '</p><p>')
-			.replace(/^(?!<)/gm, '')
+			.replace(/^(?!<)/gm, '');
+
+		return html;
 	}
 
 	const relatedGuides = (guide.relatedGuides || [])
