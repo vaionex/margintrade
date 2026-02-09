@@ -25,7 +25,7 @@
 				<rect x="13" y="8" width="3" height="16" rx="1.5" fill="white" opacity="0.9"/>
 				<path d="M6 14L12 8L18 12L22 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
 			</svg>
-			<span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span>
+			<span style="white-space: nowrap;"><span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span></span>
 		</a>
 		<button class="mobile-menu-toggle" onclick={() => menuOpen = !menuOpen} aria-label="Toggle menu">
 			{menuOpen ? '✕' : '☰'}
@@ -65,7 +65,7 @@
 					<rect x="13" y="8" width="3" height="16" rx="1.5" fill="white" opacity="0.9"/>
 					<path d="M6 14L12 8L18 12L22 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" opacity="0.8"/>
 				</svg>
-				<span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span>
+				<span style="white-space: nowrap;"><span style="color: white;">Margin</span><span style="background: linear-gradient(135deg, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Trade</span></span>
 			</a>
 			<p>Your trusted resource for margin trading exchange reviews, comparisons, and educational guides. We help traders find the best platforms for leveraged trading.</p>
 		</div>
