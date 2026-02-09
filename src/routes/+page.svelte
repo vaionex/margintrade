@@ -59,7 +59,12 @@
 
 <!-- ============ HERO ============ -->
 <section class="hero">
-	<div class="container">
+	<!-- Blur gradient orbs -->
+	<div class="blur-orb blur-orb-blue blur-orb-animate" style="width: 600px; height: 600px; top: -200px; left: -100px;"></div>
+	<div class="blur-orb blur-orb-violet blur-orb-animate" style="width: 500px; height: 500px; top: -100px; right: -150px; animation-delay: -5s;"></div>
+	<div class="blur-orb blur-orb-indigo blur-orb-animate" style="width: 400px; height: 400px; bottom: -150px; left: 30%; animation-delay: -10s;"></div>
+
+	<div class="container" style="position: relative; z-index: 1;">
 		<span class="hero-label">Trusted by 50,000+ traders worldwide</span>
 		<h1>Find the <span class="gradient-text">Best Margin Trading</span> Platform</h1>
 		<p>Expert reviews, detailed comparisons, and educational guides to help you trade with leverage safely and profitably.</p>
@@ -281,7 +286,9 @@
 </section>
 
 <!-- ============ WHY MARGINTRADE (BENTO GRID) ============ -->
-<section class="section">
+<section class="section" style="position: relative; overflow: hidden;">
+	<div class="blur-orb blur-orb-cyan blur-orb-animate" style="width: 500px; height: 500px; top: -200px; right: -100px; animation-delay: -3s;"></div>
+	<div class="blur-orb blur-orb-violet blur-orb-animate" style="width: 400px; height: 400px; bottom: -150px; left: -100px; animation-delay: -8s;"></div>
 	<div class="container">
 		<div class="text-center animate-in">
 			<span class="section-label">Why MarginTrade</span>
@@ -451,7 +458,9 @@
 </section>
 
 <!-- ============ BOTTOM CTA ============ -->
-<section class="section" style="text-align: center;">
+<section class="section" style="text-align: center; position: relative; overflow: hidden;">
+	<div class="blur-orb blur-orb-blue blur-orb-animate" style="width: 500px; height: 500px; top: -150px; left: 10%; animation-delay: -4s;"></div>
+	<div class="blur-orb blur-orb-indigo blur-orb-animate" style="width: 450px; height: 450px; bottom: -200px; right: 10%; animation-delay: -12s;"></div>
 	<div class="container">
 		<div class="animate-in">
 			<h2 class="section-title" style="margin-top:0">Ready to Start <span class="text-gradient">Margin Trading</span>?</h2>

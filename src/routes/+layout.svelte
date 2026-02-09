@@ -27,7 +27,10 @@
 	</div>
 </header>
 
-<main>
+<main style="position: relative;">
+	<!-- Subtle global background orbs -->
+	<div class="blur-orb blur-orb-blue blur-orb-animate" style="width: 800px; height: 800px; top: 0; left: -300px; opacity: 0.3; position: fixed; z-index: -1;"></div>
+	<div class="blur-orb blur-orb-violet blur-orb-animate" style="width: 600px; height: 600px; top: 40%; right: -200px; opacity: 0.25; position: fixed; z-index: -1; animation-delay: -7s;"></div>
 	{@render children()}
 </main>
 

@@ -589,14 +589,45 @@ nav a:hover {
 /* ===========================
    HERO SECTION
    =========================== */
+/* Blur gradient orbs — reusable */
+.blur-orb {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(80px);
+	pointer-events: none;
+	z-index: 0;
+}
+.blur-orb-blue {
+	background: radial-gradient(circle, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0) 70%);
+}
+.blur-orb-indigo {
+	background: radial-gradient(circle, rgba(99, 102, 241, 0.2) 0%, rgba(99, 102, 241, 0) 70%);
+}
+.blur-orb-violet {
+	background: radial-gradient(circle, rgba(139, 92, 246, 0.18) 0%, rgba(139, 92, 246, 0) 70%);
+}
+.blur-orb-cyan {
+	background: radial-gradient(circle, rgba(34, 211, 238, 0.15) 0%, rgba(34, 211, 238, 0) 70%);
+}
+@keyframes orbFloat {
+	0%, 100% { transform: translate(0, 0) scale(1); }
+	33% { transform: translate(15px, -20px) scale(1.05); }
+	66% { transform: translate(-10px, 10px) scale(0.97); }
+}
+@keyframes orbPulse {
+	0%, 100% { opacity: 0.6; }
+	50% { opacity: 1; }
+}
+.blur-orb-animate {
+	animation: orbFloat 20s ease-in-out infinite, orbPulse 8s ease-in-out infinite;
+}
+
 .hero {
 	padding: 6rem 0 5rem;
 	text-align: center;
 	position: relative;
 	overflow: hidden;
-	background: radial-gradient(ellipse 80% 60% at 50% -20%, rgba(59, 130, 246, 0.15) 0%, transparent 60%),
-				radial-gradient(ellipse 60% 40% at 80% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
-				var(--bg-primary);
+	background: var(--bg-primary);
 }
 .hero::before {
 	content: '';
