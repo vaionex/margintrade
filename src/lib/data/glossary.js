@@ -559,9 +559,7 @@ In most jurisdictions, unrealized PnL is **not taxable** — you only owe taxes 
 			{ q: 'Does unrealized PnL affect my margin?', a: 'Yes. Unrealized losses reduce your available margin and can trigger liquidation. Unrealized profits increase your available margin in cross margin mode.' },
 			{ q: 'Can unrealized PnL disappear?', a: 'Yes. Unrealized PnL fluctuates with the market. A profit can turn into a loss and vice versa. Only closing the position locks in (realizes) the PnL.' }
 		]
-	}
-];
-
+	},
 	{
 		slug: 'realized-pnl',
 		term: 'Realized PnL',
