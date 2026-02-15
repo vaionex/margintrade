@@ -101,7 +101,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="footer-disclaimer" style="margin-left: 1.5rem; margin-right: 1.5rem;">
+	<div class="footer-disclaimer">
 		<strong>⚠️ Risk Disclaimer:</strong> Margin trading involves substantial risk of loss and is not suitable for all investors. Past performance is not indicative of future results. The content on MarginTrade.com is for informational and educational purposes only. It should not be considered financial advice. You should consult a qualified financial advisor before making any trading decisions. We may receive compensation from partners featured on this site.
 	</div>
 	<div class="footer-bottom">
