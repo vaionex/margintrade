@@ -9,7 +9,7 @@
 	<link rel="canonical" href="https://www.margintrade.com/compare" />
 </svelte:head>
 
-<div class="container">
+<div class="container" style="padding-bottom: 4rem;">
 	<nav class="breadcrumbs">
 		<a href="/">Home</a> <span>/</span> <span>Compare</span>
 	</nav>
