@@ -11,7 +11,7 @@
 	function renderStars(rating) {
 		const full = Math.floor(rating);
 		const half = rating % 1 >= 0.5 ? 1 : 0;
-		return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - half);
+		return '★'.repeat(full) + (half ? '<span class="half-star">★</span>' : '') + '☆'.repeat(5 - full - half);
 	}
 
 	const maxFeeRef = 0.1; // normalize fee bars against 0.1%
@@ -95,7 +95,7 @@
 			<!-- Rating & Quick Info -->
 			<div class="animate-in" style="margin-bottom: 2rem;">
 				<div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;">
-					<span class="stars" style="font-size:1.3rem;">{renderStars(ex.rating)}</span>
+					<span class="stars" style="font-size:1.3rem;">{@html renderStars(ex.rating)}</span>
 					<span style="font-size:1.5rem;font-weight:800;">{ex.rating}/5</span>
 					<span class="badge badge-blue">{ex.type === 'crypto' ? 'Crypto Exchange' : 'Traditional Broker'}</span>
 					{#if ex.regulated}
@@ -254,7 +254,7 @@
 			<div class="sidebar-cta">
 				<div style="font-size:2.5rem;margin-bottom:0.75rem;">🏦</div>
 				<h3 style="margin:0 0 0.5rem;font-size:1.2rem;">{ex.name}</h3>
-				<div class="stars">{renderStars(ex.rating)}</div>
+				<div class="stars">{@html renderStars(ex.rating)}</div>
 				<p style="font-size:0.85rem;color:var(--text-muted);margin:0.75rem 0;">Up to {ex.maxLeverage}x leverage</p>
 				{#if ex.referralBonus}
 					<div style="background:var(--green-bg);border:1px solid var(--green-border);border-radius:var(--radius);padding:0.75rem;margin-bottom:0.5rem;">

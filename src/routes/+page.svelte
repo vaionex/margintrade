@@ -13,7 +13,7 @@
 	function renderStars(rating) {
 		const full = Math.floor(rating);
 		const half = rating % 1 >= 0.5 ? 1 : 0;
-		return '★'.repeat(full) + (half ? '½' : '') + '☆'.repeat(5 - full - half);
+		return '★'.repeat(full) + (half ? '<span class="half-star">★</span>' : '') + '☆'.repeat(5 - full - half);
 	}
 
 	const faqs = [
@@ -270,7 +270,7 @@
 						<tr>
 							<td><strong style="color: var(--accent-light);">{i + 1}</strong></td>
 							<td><a href="/exchanges/{exchange.slug}" style="color: var(--text-primary); font-weight: 600;">{exchange.name}</a></td>
-							<td><span class="stars">{renderStars(exchange.rating)}</span> <span style="color:var(--text-muted);font-size:0.85rem">{exchange.rating}</span></td>
+							<td><span class="stars">{@html renderStars(exchange.rating)}</span> <span style="color:var(--text-muted);font-size:0.85rem">{exchange.rating}</span></td>
 							<td><strong>{exchange.maxLeverage}x</strong></td>
 							<td>{exchange.makerFee}% / {exchange.takerFee}%</td>
 							<td>{exchange.tradingPairs.toLocaleString()}+</td>

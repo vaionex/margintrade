@@ -283,6 +283,11 @@ blockquote {
 	font-size: 1.1rem;
 	letter-spacing: 2px;
 }
+.half-star {
+	display: inline-block;
+	clip-path: inset(0 50% 0 0);
+	margin-right: -0.55em;
+}
 
 /* Grid */
 .grid-2 {
