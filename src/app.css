@@ -1115,7 +1115,7 @@ nav a:hover {
    =========================== */
 .comparison-table {
 	border: 1px solid var(--border);
-	border-radius: var(--radius-xl);
+	border-radius: var(--radius);
 	overflow: hidden;
 }
 .comparison-table table { margin: 0; }

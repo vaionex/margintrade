@@ -27,7 +27,7 @@
 		<h1 style="margin-top:0;">Best Margin Trading Exchanges 2026</h1>
 		<p class="section-subtitle">Compare {exchanges.length} platforms side by side — ranked by our experts</p>
 
-		<h2>Crypto Exchanges</h2>
+		<h2 style="margin-bottom:0.5rem;">Crypto Exchanges</h2>
 		<div class="comparison-table" style="margin-bottom:3rem;">
 			<table>
 				<thead>
@@ -57,7 +57,7 @@
 			</table>
 		</div>
 
-		<h2>Traditional Brokers</h2>
+		<h2 style="margin-bottom:0.5rem;">Traditional Brokers</h2>
 		<div class="comparison-table">
 			<table>
 				<thead>
