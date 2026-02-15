@@ -357,11 +357,15 @@
 	}
 	.guide-content {
 		max-width: var(--max-width-narrow);
+		min-width: 0;
+		overflow-wrap: break-word;
 	}
 
 	/* TOC */
 	.guide-toc {
 		position: relative;
+		min-width: 0;
+		overflow: hidden;
 	}
 	.toc-sticky {
 		position: sticky;
@@ -382,6 +386,8 @@
 		border-left: 2px solid var(--border);
 		padding-left: 0.75rem;
 		transition: all 0.2s;
+		word-break: break-word;
+		overflow-wrap: break-word;
 	}
 	.toc-link:hover {
 		color: var(--accent-light);
