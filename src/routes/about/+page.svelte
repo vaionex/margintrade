@@ -4,7 +4,7 @@
 	<link rel="canonical" href="https://www.margintrade.com/about" />
 </svelte:head>
 
-<div class="container-narrow">
+<div class="container">
 	<nav class="breadcrumbs">
 		<a href="/">Home</a> <span>/</span> <span>About</span>
 	</nav>

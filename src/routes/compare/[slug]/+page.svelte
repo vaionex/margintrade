@@ -87,7 +87,7 @@
 	</div>
 </section>
 
-<div class="container-narrow" style="padding-top: 2rem; padding-bottom: 4rem;">
+<div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
 
 	<!-- Score Summary -->
 	<div class="score-summary">

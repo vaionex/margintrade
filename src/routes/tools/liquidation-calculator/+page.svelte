@@ -36,7 +36,7 @@
 	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbLd)}</script>`}
 </svelte:head>
 
-<div class="container-narrow" style="padding-top: 2rem; padding-bottom: 4rem;">
+<div class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
 	<nav class="breadcrumbs">
 		<a href="/">Home</a> <span>/</span>
 		<a href="/tools">Tools</a> <span>/</span>

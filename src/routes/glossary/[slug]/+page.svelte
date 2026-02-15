@@ -71,7 +71,7 @@
 	{#if faqLd}{@html `<script type="application/ld+json">${JSON.stringify(faqLd)}</script>`}{/if}
 </svelte:head>
 
-<article class="container-narrow" style="padding-top: 2rem; padding-bottom: 4rem;">
+<article class="container" style="padding-top: 2rem; padding-bottom: 4rem;">
 	<nav class="breadcrumbs">
 		<a href="/">Home</a> <span>/</span>
 		<a href="/glossary">Glossary</a> <span>/</span>
