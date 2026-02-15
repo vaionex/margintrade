@@ -65,240 +65,177 @@
 	<div class="blur-orb blur-orb-indigo blur-orb-animate" style="width: 400px; height: 400px; bottom: -150px; left: 30%; animation-delay: -10s;"></div>
 
 	<div class="container" style="position: relative; z-index: 1;">
-		<span class="hero-label">Trusted by 50,000+ traders worldwide</span>
-		<h1>Find the <span class="gradient-text">Best Margin Trading</span> Platform</h1>
-		<p>Expert reviews, detailed comparisons, and educational guides to help you trade with leverage safely and profitably.</p>
-		<div class="hero-actions">
-			<a href="/exchanges" class="btn btn-primary btn-lg">Compare Exchanges</a>
-			<a href="/learn/what-is-margin-trading" class="btn btn-outline btn-lg">Learn Margin Trading</a>
-		</div>
-		<div class="hero-trust">
-			<span><span class="trust-icon">✓</span> 15 exchanges compared</span>
-			<span><span class="trust-icon">✓</span> Updated daily</span>
-			<span><span class="trust-icon">✓</span> 100% independent</span>
-		</div>
-
-		<!-- Animated Trading SVG Illustration -->
-		<div class="hero-illustration" style="position: relative; max-width: 900px; margin: 2rem auto 0; transform: translateX(-8%);">
-			<!-- Main chart card -->
-			<svg viewBox="0 0 560 400" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 75%; height: auto;">
-				<defs>
-					<linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
-						<stop offset="0%" stop-color="#3b82f6"/>
-						<stop offset="50%" stop-color="#6366f1"/>
-						<stop offset="100%" stop-color="#8b5cf6"/>
-					</linearGradient>
-					<linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-						<stop offset="0%" stop-color="#3b82f6" stop-opacity="0.3"/>
-						<stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
-					</linearGradient>
-					<linearGradient id="leverageGrad" x1="0" y1="0" x2="1" y2="1">
-						<stop offset="0%" stop-color="#3b82f6"/>
-						<stop offset="100%" stop-color="#8b5cf6"/>
-					</linearGradient>
-					<filter id="cardShadow"><feDropShadow dx="0" dy="4" stdDeviation="16" floodColor="#3b82f6" floodOpacity="0.08"/></filter>
-					<filter id="panelGlow"><feDropShadow dx="0" dy="2" stdDeviation="10" floodColor="#6366f1" floodOpacity="0.12"/></filter>
-				</defs>
-
-				<!-- Main card background -->
-				<g filter="url(#cardShadow)">
-					<rect x="10" y="10" width="540" height="380" rx="16" fill="#111a2e" stroke="#1e293b" stroke-width="1"/>
-				</g>
-
-				<!-- Top toolbar -->
-				<rect x="10" y="10" width="540" height="44" rx="16" fill="#0c1220"/>
-				<rect x="10" y="38" width="540" height="16" fill="#0c1220"/>
-				<line x1="10" y1="54" x2="550" y2="54" stroke="#1e293b" stroke-width="1"/>
-				<!-- Toolbar items -->
-				<circle cx="32" cy="32" r="5" fill="#22c55e" opacity="0.6"/>
-				<circle cx="48" cy="32" r="5" fill="#f59e0b" opacity="0.6"/>
-				<circle cx="64" cy="32" r="5" fill="#ef4444" opacity="0.6"/>
-				<text x="90" y="36" fill="#94a3b8" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600">BTC / USDT</text>
-				<text x="190" y="36" fill="#22c55e" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="700">$67,842.50</text>
-				<text x="290" y="36" fill="#22c55e" font-size="10" font-family="Inter, system-ui, sans-serif">▲ +4.2%</text>
-				<!-- Timeframe tabs -->
-				<rect x="370" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="379" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1H</text>
-				<rect x="405" y="22" width="30" height="20" rx="4" fill="url(#leverageGrad)"/>
-				<text x="413" y="36" fill="white" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700">4H</text>
-				<rect x="440" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="449" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1D</text>
-				<rect x="475" y="22" width="30" height="20" rx="4" fill="#1e293b"/>
-				<text x="483" y="36" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600">1W</text>
-
-				<!-- Grid -->
-				{#each [100, 155, 210, 265, 320] as y}
-					<line x1="55" y1={y} x2="530" y2={y} stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4 4"/>
-				{/each}
-				{#each [120, 200, 280, 360, 440] as x}
-					<line x1={x} y1="70" x2={x} y2="340" stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4 4"/>
-				{/each}
-
-				<!-- Y-axis labels -->
-				<text x="22" y="104" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$69k</text>
-				<text x="22" y="159" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$68k</text>
-				<text x="22" y="214" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$67k</text>
-				<text x="22" y="269" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$66k</text>
-				<text x="22" y="324" fill="#8b9bb5" font-size="9" font-family="Inter, system-ui, sans-serif">$65k</text>
-
-				<!-- X-axis labels -->
-				<text x="105" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">09:00</text>
-				<text x="185" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">11:00</text>
-				<text x="265" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">13:00</text>
-				<text x="345" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">15:00</text>
-				<text x="425" y="356" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif" text-anchor="middle">17:00</text>
-
-				<!-- Candlesticks (16 candles, more detail) -->
-				{#each [
-					{x:85, o:260, c:230, h:220, l:270, bull:true},
-					{x:110, o:230, c:245, h:225, l:260, bull:false},
-					{x:135, o:240, c:210, h:200, l:250, bull:true},
-					{x:160, o:210, c:195, h:185, l:220, bull:true},
-					{x:185, o:195, c:215, h:190, l:230, bull:false},
-					{x:210, o:210, c:185, h:175, l:220, bull:true},
-					{x:235, o:185, c:170, h:160, l:195, bull:true},
-					{x:260, o:170, c:180, h:165, l:195, bull:false},
-					{x:285, o:178, c:155, h:145, l:190, bull:true},
-					{x:310, o:155, c:140, h:130, l:165, bull:true},
-					{x:335, o:140, c:155, h:135, l:165, bull:false},
-					{x:360, o:152, c:130, h:120, l:160, bull:true},
-					{x:385, o:130, c:115, h:105, l:140, bull:true},
-					{x:410, o:115, c:125, h:110, l:135, bull:false},
-					{x:435, o:122, c:105, h:95, l:130, bull:true},
-					{x:460, o:105, c:110, h:98, l:118, bull:false}
-				] as candle, i}
-					<g class="svg-candle-grow" style="animation-delay: {0.15 + i * 0.08}s">
-						<line x1={candle.x} y1={candle.h} x2={candle.x} y2={candle.l} stroke={candle.bull ? '#22c55e' : '#ef4444'} stroke-width="1.5"/>
-						<rect x={candle.x - 7} y={Math.min(candle.o, candle.c)} width="14" height={Math.abs(candle.c - candle.o) || 3} rx="1.5" fill={candle.bull ? '#22c55e' : '#ef4444'}/>
-					</g>
-				{/each}
-
-				<!-- Moving average line -->
-				<polyline class="chart-line-draw" points="85,255 110,240 135,225 160,210 185,205 210,195 235,182 260,178 285,168 310,155 335,150 360,142 385,128 410,122 435,112 460,108"
-					stroke="url(#lineGrad)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
-
-				<!-- Area fill -->
-				<path d="M85,255 L110,240 L135,225 L160,210 L185,205 L210,195 L235,182 L260,178 L285,168 L310,155 L335,150 L360,142 L385,128 L410,122 L435,112 L460,108 L460,340 L85,340 Z"
-					fill="url(#areaGrad)" opacity="0.25"/>
-
-				<!-- Current price line -->
-				<line x1="55" y1="110" x2="530" y2="110" stroke="#3b82f6" stroke-width="1" stroke-dasharray="6 3" opacity="0.5"/>
-				<rect x="490" y="102" width="48" height="16" rx="3" fill="#3b82f6"/>
-				<text x="514" y="113" fill="white" font-size="8" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">$67.8k</text>
-
-				<!-- Hover crosshair -->
-				<g class="chart-crosshair">
-					<line x1="300" y1="70" x2="300" y2="340" stroke="rgba(59, 130, 246, 0.6)" stroke-width="1" stroke-dasharray="4 4"/>
-					<line x1="55" y1="200" x2="530" y2="200" stroke="rgba(59, 130, 246, 0.6)" stroke-width="1" stroke-dasharray="4 4"/>
-					<circle cx="300" cy="200" r="4" fill="rgba(59, 130, 246, 0.8)" stroke="white" stroke-width="1"/>
-				</g>
-
-				<!-- Volume bars at bottom -->
-				{#each [18, 12, 22, 28, 15, 25, 32, 14, 30, 35, 20, 38, 42, 16, 40, 22] as vol, i}
-					<rect x={78 + i * 25} y={340 - vol * 0.8} width="14" height={vol * 0.8} rx="1" fill={[true,false,true,true,false,true,true,false,true,true,false,true,true,false,true,false][i] ? 'rgba(34,197,94,0.25)' : 'rgba(239,68,68,0.25)'}/>
-				{/each}
-
-				<!-- Bottom order panel -->
-				<rect x="10" y="365" width="540" height="25" rx="0" fill="#0c1220"/>
-				<rect x="10" y="374" width="540" height="16" rx="16" fill="#0c1220"/>
-				<rect x="30" y="370" width="70" height="18" rx="4" fill="#22c55e" opacity="0.15"/>
-				<text x="65" y="383" fill="#22c55e" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Buy / Long</text>
-				<rect x="110" y="370" width="70" height="18" rx="4" fill="#ef4444" opacity="0.15"/>
-				<text x="145" y="383" fill="#ef4444" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Sell / Short</text>
-				<text x="210" y="383" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Qty: 0.5 BTC</text>
-				<text x="310" y="383" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Margin: $3,392</text>
-			</svg>
-
-			<!-- Floating Leverage Panel (positioned right, top) -->
-			<div class="hero-float-panel" style="position: absolute; top: 5%; right: 0; width: 200px;">
-				<svg viewBox="0 0 200 140" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; filter: drop-shadow(0 4px 20px rgba(99,102,241,0.15));">
-					<rect x="2" y="2" width="196" height="136" rx="14" fill="#111a2e" stroke="#334155" stroke-width="1"/>
-					<text x="18" y="28" fill="#94a3b8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" letter-spacing="0.08em">LEVERAGE</text>
-					<!-- Leverage buttons -->
-					<rect x="14" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="34" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">3x</text>
-					<rect x="60" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="80" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">5x</text>
-					<rect x="106" y="38" width="40" height="26" rx="6" fill="url(#leverageGrad2)"/>
-					<text x="126" y="55" fill="white" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">10x</text>
-					<rect x="152" y="38" width="40" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
-					<text x="172" y="55" fill="#8b9bb5" font-size="11" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="middle">25x</text>
-					<!-- Leverage slider -->
-					<rect x="14" y="74" width="172" height="4" rx="2" fill="#1e293b"/>
-					<rect x="14" y="74" width="100" height="4" rx="2" fill="url(#leverageGrad2)"/>
-					<circle cx="114" cy="76" r="7" fill="url(#leverageGrad2)" stroke="#111a2e" stroke-width="2">
-						<animate attributeName="cx" values="114;118;114" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
-					</circle>
-					<!-- Risk indicator -->
-					<text x="18" y="102" fill="#94a3b8" font-size="9" font-family="Inter, system-ui, sans-serif">Risk Level</text>
-					<rect x="14" y="108" width="172" height="6" rx="3" fill="#1e293b"/>
-					<rect x="14" y="108" width="85" height="6" rx="3" fill="#f59e0b"/>
-					<text x="170" y="102" fill="#f59e0b" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">Medium</text>
-					<!-- Entry/Liq prices -->
-					<text x="18" y="128" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Entry: $67,842</text>
-					<text x="186" y="128" fill="#ef4444" font-size="8" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">Liq: $61,058</text>
-					<defs>
-						<linearGradient id="leverageGrad2" x1="0" y1="0" x2="1" y2="1">
-							<stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#8b5cf6"/>
-						</linearGradient>
-					</defs>
-				</svg>
+		<div class="hero-split">
+			<!-- Left: Text content -->
+			<div class="hero-content">
+				<span class="hero-label">Trusted by 50,000+ traders worldwide</span>
+				<h1>Find the <span class="gradient-text">Best Margin Trading</span> Platform</h1>
+				<p class="hero-desc">Expert reviews, detailed comparisons, and educational guides to help you trade with leverage safely and profitably.</p>
+				<div class="hero-actions">
+					<a href="/exchanges" class="btn btn-primary btn-lg">Compare Exchanges</a>
+					<a href="/learn/what-is-margin-trading" class="btn btn-outline btn-lg">Learn Margin Trading</a>
+				</div>
+				<div class="hero-trust">
+					<span><span class="trust-icon">✓</span> 15 exchanges reviewed</span>
+					<span><span class="trust-icon">✓</span> Updated daily</span>
+					<span><span class="trust-icon">✓</span> 100% independent</span>
+				</div>
 			</div>
 
-			<!-- Floating P&L Panel (positioned right, middle) -->
-			<div class="hero-float-panel" style="position: absolute; top: 42%; right: -1%; width: 210px; animation-delay: -3s;">
-				<svg viewBox="0 0 210 160" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; filter: drop-shadow(0 4px 20px rgba(34,197,94,0.12));">
-					<rect x="2" y="2" width="206" height="156" rx="14" fill="#111a2e" stroke="#334155" stroke-width="1"/>
-					<text x="18" y="26" fill="#94a3b8" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="700" letter-spacing="0.08em">POSITION — BTC/USDT</text>
-					<!-- P&L value -->
-					<text x="18" y="56" fill="#22c55e" font-size="26" font-family="Inter, system-ui, sans-serif" font-weight="800">+$12,480</text>
-					<text x="165" y="56" fill="#22c55e" font-size="12" font-family="Inter, system-ui, sans-serif" font-weight="600">+36.7%</text>
-					<!-- Progress bar -->
-					<rect x="18" y="68" width="174" height="5" rx="2.5" fill="#1e293b"/>
-					<rect x="18" y="68" width="128" height="5" rx="2.5" fill="#22c55e" opacity="0.7">
-						<animate attributeName="width" values="100;128;110;128" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
-					</rect>
-					<!-- Details grid -->
-					<text x="18" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Side</text>
-					<text x="18" y="104" fill="#22c55e" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">Long 10x</text>
-					<text x="90" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Size</text>
-					<text x="90" y="104" fill="#f0f4f8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">0.5 BTC</text>
-					<text x="155" y="92" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Margin</text>
-					<text x="155" y="104" fill="#f0f4f8" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="600">$3,392</text>
-					<!-- Funding rate -->
-					<line x1="18" y1="114" x2="192" y2="114" stroke="#1e293b" stroke-width="1"/>
-					<text x="18" y="130" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Funding Rate</text>
-					<text x="192" y="130" fill="#22c55e" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">0.012%</text>
-					<text x="18" y="146" fill="#8b9bb5" font-size="8" font-family="Inter, system-ui, sans-serif">Next Funding</text>
-					<text x="192" y="146" fill="#94a3b8" font-size="9" font-family="Inter, system-ui, sans-serif" font-weight="600" text-anchor="end">2h 14m</text>
-				</svg>
-			</div>
+			<!-- Right: Trading illustration -->
+			<div class="hero-visual">
+				<!-- Main chart card -->
+				<div class="hero-chart-card">
+					<svg viewBox="0 0 480 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<defs>
+							<linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+								<stop offset="0%" stop-color="#3b82f6"/><stop offset="50%" stop-color="#6366f1"/><stop offset="100%" stop-color="#8b5cf6"/>
+							</linearGradient>
+							<linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+								<stop offset="0%" stop-color="#3b82f6" stop-opacity="0.25"/><stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+							</linearGradient>
+							<linearGradient id="leverageGrad" x1="0" y1="0" x2="1" y2="1">
+								<stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#8b5cf6"/>
+							</linearGradient>
+							<linearGradient id="leverageGrad2" x1="0" y1="0" x2="1" y2="1">
+								<stop offset="0%" stop-color="#3b82f6"/><stop offset="100%" stop-color="#8b5cf6"/>
+							</linearGradient>
+						</defs>
 
-			<!-- Floating Exchange Badges (bottom right) -->
-			<div style="position: absolute; bottom: 8%; right: 2%; display: flex; gap: 6px;">
-				<div class="hero-float-panel" style="animation-delay: -2s;">
-					<svg viewBox="0 0 80 32" style="width: 80px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));">
-						<rect x="1" y="1" width="78" height="30" rx="8" fill="#111a2e" stroke="#334155" stroke-width="0.5"/>
-						<text x="40" y="20" fill="#f0b90b" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Binance</text>
+						<!-- Card bg -->
+						<rect x="0" y="0" width="480" height="340" rx="16" fill="#111a2e" stroke="#1e293b" stroke-width="1"/>
+
+						<!-- Toolbar -->
+						<rect x="0" y="0" width="480" height="44" rx="16" fill="#0c1220"/>
+						<rect x="0" y="28" width="480" height="16" fill="#0c1220"/>
+						<line x1="0" y1="44" x2="480" y2="44" stroke="#1e293b"/>
+						<circle cx="20" cy="22" r="4" fill="#22c55e" opacity="0.6"/>
+						<circle cx="34" cy="22" r="4" fill="#f59e0b" opacity="0.6"/>
+						<circle cx="48" cy="22" r="4" fill="#ef4444" opacity="0.6"/>
+						<text x="68" y="26" fill="#94a3b8" font-size="11" font-family="Inter,sans-serif" font-weight="600">BTC / USDT</text>
+						<text x="170" y="26" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="700">$67,842.50</text>
+						<text x="270" y="26" fill="#22c55e" font-size="10" font-family="Inter,sans-serif">▲ +4.2%</text>
+						<!-- Timeframe tabs -->
+						<rect x="340" y="12" width="28" height="20" rx="4" fill="#1e293b"/>
+						<text x="354" y="26" fill="#8b9bb5" font-size="9" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">1H</text>
+						<rect x="372" y="12" width="28" height="20" rx="4" fill="url(#leverageGrad)"/>
+						<text x="386" y="26" fill="white" font-size="9" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">4H</text>
+						<rect x="404" y="12" width="28" height="20" rx="4" fill="#1e293b"/>
+						<text x="418" y="26" fill="#8b9bb5" font-size="9" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">1D</text>
+						<rect x="436" y="12" width="28" height="20" rx="4" fill="#1e293b"/>
+						<text x="450" y="26" fill="#8b9bb5" font-size="9" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">1W</text>
+
+						<!-- Grid -->
+						{#each [90, 135, 180, 225, 270] as y}
+							<line x1="45" y1={y} x2="465" y2={y} stroke="#1e293b" stroke-width="0.5" stroke-dasharray="4 4"/>
+						{/each}
+
+						<!-- Y-axis -->
+						<text x="12" y="94" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">$69k</text>
+						<text x="12" y="139" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">$68k</text>
+						<text x="12" y="184" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">$67k</text>
+						<text x="12" y="229" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">$66k</text>
+						<text x="12" y="274" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">$65k</text>
+
+						<!-- Candlesticks -->
+						{#each [
+							{x:65,o:220,c:195,h:185,l:230,bull:true},{x:90,o:195,c:208,h:190,l:218,bull:false},
+							{x:115,o:205,c:180,h:170,l:215,bull:true},{x:140,o:180,c:168,h:158,l:190,bull:true},
+							{x:165,o:168,c:182,h:162,l:195,bull:false},{x:190,o:180,c:160,h:150,l:190,bull:true},
+							{x:215,o:160,c:148,h:138,l:170,bull:true},{x:240,o:148,c:155,h:142,l:168,bull:false},
+							{x:265,o:153,c:135,h:125,l:162,bull:true},{x:290,o:135,c:122,h:112,l:145,bull:true},
+							{x:315,o:122,c:135,h:118,l:142,bull:false},{x:340,o:132,c:115,h:105,l:140,bull:true},
+							{x:365,o:115,c:102,h:92,l:122,bull:true},{x:390,o:102,c:110,h:98,l:118,bull:false},
+							{x:415,o:108,c:95,h:85,l:115,bull:true},{x:440,o:95,c:100,h:88,l:108,bull:false}
+						] as c, i}
+							<g class="svg-candle-grow" style="animation-delay: {0.15 + i * 0.06}s">
+								<line x1={c.x} y1={c.h} x2={c.x} y2={c.l} stroke={c.bull ? '#22c55e' : '#ef4444'} stroke-width="1.5"/>
+								<rect x={c.x - 6} y={Math.min(c.o, c.c)} width="12" height={Math.abs(c.c - c.o) || 3} rx="1.5" fill={c.bull ? '#22c55e' : '#ef4444'}/>
+							</g>
+						{/each}
+
+						<!-- Moving average -->
+						<polyline class="chart-line-draw" points="65,215 90,205 115,195 140,180 165,178 190,168 215,155 240,152 265,142 290,132 315,130 340,122 365,110 390,108 415,100 440,98"
+							stroke="url(#lineGrad)" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.6"/>
+						<!-- Area fill -->
+						<path d="M65,215 L90,205 L115,195 L140,180 L165,178 L190,168 L215,155 L240,152 L265,142 L290,132 L315,130 L340,122 L365,110 L390,108 L415,100 L440,98 L440,290 L65,290 Z"
+							fill="url(#areaGrad)" opacity="0.3"/>
+
+						<!-- Price line -->
+						<line x1="45" y1="100" x2="465" y2="100" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5 3" opacity="0.4"/>
+						<rect x="430" y="92" width="44" height="16" rx="3" fill="#3b82f6"/>
+						<text x="452" y="103" fill="white" font-size="8" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">$67.8k</text>
+
+						<!-- Volume bars -->
+						{#each [18,12,22,28,15,25,32,14,30,35,20,38,42,16,40,22] as vol, i}
+							<rect x={59 + i * 25} y={290 - vol * 0.7} width="12" height={vol * 0.7} rx="1" fill={[true,false,true,true,false,true,true,false,true,true,false,true,true,false,true,false][i] ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)'}/>
+						{/each}
+
+						<!-- Bottom bar -->
+						<rect x="0" y="306" width="480" height="34" rx="0" fill="#0c1220"/>
+						<rect x="0" y="324" width="480" height="16" rx="16" fill="#0c1220"/>
+						<rect x="16" y="312" width="65" height="18" rx="4" fill="#22c55e" opacity="0.15"/>
+						<text x="48" y="325" fill="#22c55e" font-size="9" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">Buy / Long</text>
+						<rect x="88" y="312" width="65" height="18" rx="4" fill="#ef4444" opacity="0.15"/>
+						<text x="120" y="325" fill="#ef4444" font-size="9" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">Sell / Short</text>
 					</svg>
 				</div>
-				<div class="hero-float-panel" style="animation-delay: -5s;">
-					<svg viewBox="0 0 65 32" style="width: 65px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));">
-						<rect x="1" y="1" width="63" height="30" rx="8" fill="#111a2e" stroke="#334155" stroke-width="0.5"/>
-						<text x="32" y="20" fill="#f69b2c" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Bybit</text>
+
+				<!-- Floating Leverage Panel -->
+				<div class="hero-float-panel hero-panel-leverage">
+					<svg viewBox="0 0 190 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="1" y="1" width="188" height="98" rx="12" fill="#111a2e" stroke="#334155" stroke-width="1"/>
+						<text x="14" y="22" fill="#94a3b8" font-size="9" font-family="Inter,sans-serif" font-weight="700" letter-spacing="0.08em">LEVERAGE</text>
+						<rect x="12" y="32" width="36" height="22" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+						<text x="30" y="47" fill="#8b9bb5" font-size="10" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">3x</text>
+						<rect x="52" y="32" width="36" height="22" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+						<text x="70" y="47" fill="#8b9bb5" font-size="10" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">5x</text>
+						<rect x="92" y="32" width="36" height="22" rx="5" fill="url(#leverageGrad2)"/>
+						<text x="110" y="47" fill="white" font-size="10" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">10x</text>
+						<rect x="132" y="32" width="36" height="22" rx="5" fill="#1e293b" stroke="#334155" stroke-width="0.5"/>
+						<text x="150" y="47" fill="#8b9bb5" font-size="10" font-family="Inter,sans-serif" font-weight="600" text-anchor="middle">25x</text>
+						<!-- Slider -->
+						<rect x="12" y="64" width="166" height="4" rx="2" fill="#1e293b"/>
+						<rect x="12" y="64" width="96" height="4" rx="2" fill="url(#leverageGrad2)"/>
+						<circle cx="108" cy="66" r="6" fill="url(#leverageGrad2)" stroke="#111a2e" stroke-width="2">
+							<animate attributeName="cx" values="108;112;108" dur="4s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1"/>
+						</circle>
+						<!-- Risk -->
+						<text x="14" y="88" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">Risk: </text>
+						<text x="38" y="88" fill="#f59e0b" font-size="8" font-family="Inter,sans-serif" font-weight="600">Medium</text>
+						<text x="178" y="88" fill="#ef4444" font-size="8" font-family="Inter,sans-serif" font-weight="600" text-anchor="end">Liq: $61,058</text>
 					</svg>
 				</div>
-				<div class="hero-float-panel" style="animation-delay: -8s;">
-					<svg viewBox="0 0 70 32" style="width: 70px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));">
-						<rect x="1" y="1" width="68" height="30" rx="8" fill="#111a2e" stroke="#334155" stroke-width="0.5"/>
-						<text x="35" y="20" fill="#8b5cf6" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">Kraken</text>
+
+				<!-- Floating P&L Panel -->
+				<div class="hero-float-panel hero-panel-pnl" style="animation-delay: -3s;">
+					<svg viewBox="0 0 190 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<rect x="1" y="1" width="188" height="88" rx="12" fill="#111a2e" stroke="#334155" stroke-width="1"/>
+						<text x="14" y="20" fill="#94a3b8" font-size="8" font-family="Inter,sans-serif" font-weight="700" letter-spacing="0.08em">POSITION — BTC/USDT</text>
+						<text x="14" y="46" fill="#22c55e" font-size="22" font-family="Inter,sans-serif" font-weight="800">+$12,480</text>
+						<text x="140" y="46" fill="#22c55e" font-size="11" font-family="Inter,sans-serif" font-weight="600">+36.7%</text>
+						<!-- Progress bar -->
+						<rect x="14" y="56" width="162" height="4" rx="2" fill="#1e293b"/>
+						<rect x="14" y="56" width="118" height="4" rx="2" fill="#22c55e" opacity="0.7">
+							<animate attributeName="width" values="95;118;100;118" dur="6s" repeatCount="indefinite" calcMode="spline" keySplines="0.45 0 0.55 1;0.45 0 0.55 1;0.45 0 0.55 1"/>
+						</rect>
+						<!-- Details -->
+						<text x="14" y="76" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">Long 10x</text>
+						<text x="75" y="76" fill="#f0f4f8" font-size="8" font-family="Inter,sans-serif" font-weight="600">0.5 BTC</text>
+						<text x="130" y="76" fill="#8b9bb5" font-size="8" font-family="Inter,sans-serif">Margin: $3,392</text>
 					</svg>
 				</div>
-				<div class="hero-float-panel" style="animation-delay: -11s;">
-					<svg viewBox="0 0 55 32" style="width: 55px; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.3));">
-						<rect x="1" y="1" width="53" height="30" rx="8" fill="#111a2e" stroke="#334155" stroke-width="0.5"/>
-						<text x="27" y="20" fill="#00e6a7" font-size="10" font-family="Inter, system-ui, sans-serif" font-weight="700" text-anchor="middle">OKX</text>
-					</svg>
+
+				<!-- Exchange badges -->
+				<div class="hero-exchanges">
+					{#each [{name:'Binance',color:'#f0b90b',w:75},{name:'Bybit',color:'#f69b2c',w:60},{name:'Kraken',color:'#8b5cf6',w:65},{name:'OKX',color:'#00e6a7',w:52}] as ex, i}
+						<div class="hero-float-panel" style="animation-delay: {-2 - i * 3}s;">
+							<svg viewBox="0 0 {ex.w} 28" style="width: {ex.w}px;">
+								<rect x="1" y="1" width={ex.w - 2} height="26" rx="7" fill="#111a2e" stroke="#334155" stroke-width="0.5"/>
+								<text x={ex.w / 2} y="18" fill={ex.color} font-size="9" font-family="Inter,sans-serif" font-weight="700" text-anchor="middle">{ex.name}</text>
+							</svg>
+						</div>
+					{/each}
 				</div>
 			</div>
 		</div>
